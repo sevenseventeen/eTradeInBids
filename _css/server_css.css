@@ -1,0 +1,787 @@
+#sellers_listings li {
+    height:20px;
+    padding:4px 0 0 5px;
+    font-size:10px;
+
+}
+
+.grey_background {
+    background-color:#e6e6e6;
+}
+
+
+#account_tab_background {
+    background-color: #979390;
+    float: left;
+    height: 38px;
+    width: 800px;
+    position:relative;
+    z-index:0;
+}
+
+#account_tab_background {
+    background-color: #f0f0f0;
+    height: 45px;
+    width: 485px;
+    margin-top:-30px;
+    margin-bottom:-10px;
+    z-index:0;
+}
+
+.account_tab_active {
+    background-color: #FFFFFF;
+    display: block;
+    float: left;
+    height: 35px;
+    margin: 0 0 -15px;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 121px;
+    z-index:1;
+}
+.account_tab_inactive {
+    display: block;
+    float: left;
+    height: 35px;
+    margin: 0 0 -15px;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 121px;
+    z-index: 1;
+}
+
+.account_tab_inactive.first {
+    border-left: 0 solid #FFFFFF;
+}
+
+.account_tab_inactive.last {
+    border-right: 0 solid #FFFFFF;
+}
+
+div a.account_tab_inactive {
+    color:#2087d7;
+    border-right:0px solid #FFF;
+}
+
+#account_tab_shadow_cover {
+    background-color: #FFFFFF;
+    height: 1px;
+    margin: 0;
+    position: relative;
+    width: 120px;
+    z-index: 3;
+}
+
+#account_tab_shadow_cover.second_account_tab {
+	margin:0 0 0 120px;
+}
+
+#account_tab_shadow_cover.third_account_tab {
+	margin:0 0 0 240px;
+}
+
+#account_tab_shadow_cover.fourth_account_tab {
+	margin:0 0 0 360px;
+}
+
+
+/* ************** Body and Main Container ************** */
+html {
+	background-color:#b8b5ac;
+	color:#3d4649;
+}
+
+
+body {
+	text-align: center;
+	font-family: "Verdana",Sans-serif;
+	font-size:12px;
+	background-color:#b8b5ac;
+}
+
+#main_container {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	width: 960px;
+	text-align: left;
+}
+
+
+/* ************** Global ************** */
+
+.rounded_corners {
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(../_htc/PIE.php);
+}
+
+.drop_shadow {
+	-moz-box-shadow: 1px 1px 2px #7a7a7a;
+  	-webkit-box-shadow: 1px 1px 2px #7a7a7a;
+	box-shadow: 1px 1px 2px #7a7a7a;
+	behavior: url(../_htc/PIE.php);
+}
+
+.inner_shadow {
+	-moz-box-shadow: inset 1px 1px 1px #7a7a7a;
+  	-webkit-box-shadow: inset 1px 1px 1px #7a7a7a;
+	box-shadow: inset 1px 1px 1px #7a7a7a;
+	behavior: url(../_htc/PIE.php);
+	position:relative;
+	z-index:10;
+}
+
+.light_gradient {
+	background: #CCC; /*fallback for non-CSS3 browsers*/
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#FFFFFF) to(#f2f2f2)); /*old webkit*/
+    background: -webkit-linear-gradient(#FFFFFF, #f2f2f2); /*new webkit*/
+    background: -moz-linear-gradient(#FFFFFF, #f2f2f2); /*gecko*/
+    background: -ms-linear-gradient(#FFFFFF, #f2f2f2); /*IE10*/
+    background: -o-linear-gradient(#FFFFFF, #f2f2f2); /*opera 11.10+*/
+    background: linear-gradient(#FFFFFF, #f2f2f2); /*future CSS3 browsers*/
+    -pie-background: linear-gradient(#FFFFFF, #f2f2f2); /*PIE*/
+}
+
+.module_960 {
+	position:relative;
+	background-color: #FFFFFF;
+    border: 0 solid #CCCCCC;
+    margin-bottom: 20px;
+    padding: 30px;
+    width: 898px;
+    z-index:2;
+ }
+
+.dark_gradient {
+	background: #CCC; /*fallback for non-CSS3 browsers*/
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2) to(#e1e1e1)); /*old webkit*/
+    background: -webkit-linear-gradient(#f2f2f2, #e1e1e1); /*new webkit*/
+    background: -moz-linear-gradient(#f2f2f2, #e1e1e1); /*gecko*/
+    background: -ms-linear-gradient(#f2f2f2, #e1e1e1); /*IE10*/
+    background: -o-linear-gradient(#f2f2f2, #e1e1e1); /*opera 11.10+*/
+    background: linear-gradient(#f2f2f2, #e1e1e1); /*future CSS3 browsers*/
+    -pie-background: linear-gradient(#f2f2f2, #e1e1e1); /*PIE*/
+}
+
+#header.module_960 {
+	margin-bottom: 0;
+}
+
+.module_560 {
+	float:left;
+	width: 558px;
+	border: solid 1px #cccccc;
+	margin-bottom:20px;
+	padding:20px;
+}
+
+.module_400 {
+	float:left;
+	width: 298px;
+	border: solid 1px #cccccc;
+	margin: 0 0 20px 20px;
+	padding:20px;
+}
+
+.title_module {
+	height: 28px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.clear_float {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+h1 {
+	font-family: "Verdana", serif;
+	font-size:24px;
+	margin-bottom:20px;
+	color:#EA4815;
+}
+
+.sellers_account h1 {
+	margin:0px;
+}
+	
+
+h2 {
+	font-weight:bold;
+	font-size:14px;	
+}
+
+p {
+	margin:11px 0;
+	line-height:22px;	
+}
+
+strong {
+	font-weight:bold;
+}
+
+.error {
+	color:red;
+}
+
+.button {
+	display: block;
+	width: 140px;
+	height: 25px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	text-align: center;
+	padding-top: 10px;
+	margin-left: 10px;
+	margin-bottom:10px;
+}
+
+a.button {
+	color: black;
+	font-size:12px;
+	font-family: "Arial", Sans-serif;
+	text-decoration: none;
+}
+
+
+
+.width_480 p {
+	width:518px;
+}
+
+.right_image {
+    text-align:right;
+	float:right;
+    width:350px;
+	border-left:1px dotted #CCCCCC;
+}
+
+
+
+/* ************** Header ************** */
+
+
+#header {
+	height: 85px;
+	width: 958px;
+	text-align: right;
+	padding:0px;
+	position: relative;
+	z-index:1;
+}
+
+#header img {
+    float: left;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+#main_navigation_left {
+	position: relative;
+    margin: -5px 0 20px 0;
+    width: 615px;
+    float:left;
+    z-index:0;
+}
+
+#main_navigation_right {
+	position: relative;
+    float: right;
+    margin: -5px 2px 5px 20px;
+    width: 120px;
+}
+
+#header_login {
+	position:relative;
+	float:right;
+     display: block;
+     margin: 30px 30px 0pt 0pt;
+     width:500px;
+}
+
+
+.main_navigation_item {
+     display: block;
+     float: left;
+     height: 28px;
+     margin-left: 0px;
+     padding-top: 20px;
+     text-align: center;
+     width: 120px;
+     border-right:1px solid #ebebeb;
+    border-left:1px solid #FFFFFF;
+}
+
+.main_navigation_item.first {
+    border-left:0px solid #FFFFFF;
+}
+
+.main_navigation_item.last {
+    border-right:0px solid #FFFFFF;
+}
+
+a.main_navigation_item, a.account_tab_active, a.account_tab_inactive {
+	color: #808080;
+	font-size:12px;
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	text-decoration: none;
+}
+
+a.main_navigation_item:hover, a.account_tab_active:hover, a.account_tab_inactive:hover {
+	color:#EA4815;
+}
+
+.module_header a {
+    width: 220px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-bottom:-1px;
+    margin-right:-1px;
+    padding-top:20px;
+    float:left;
+    margin-bottom:20px;
+}
+
+/* ************** Vehicle Listing ************** */
+
+.vehicle_listing {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+.vehicle_listing img {
+    background: none repeat scroll 0 0 black;
+    float: left;
+}
+
+.vehicle_listing h2 {
+    font-size: 23px;
+    font-weight: normal;
+    margin: 0 0 -3px 0;
+    color: #95918f;
+}
+
+.vehicle_listing h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+        color: #95918f;
+}
+
+.column_1 {
+	float: left;
+	width: 298px;
+}
+
+.column_2 {
+	float: left;
+	margin-left: 10px;
+	width: 299px;
+}
+	
+.column_2 p {
+	margin: 10px 10px 10px 0;
+}
+
+.column_3 {
+	float: right;
+	margin-left: 10px;
+	width: 280px;
+	text-align: right;
+}
+	
+.column_3 p {
+	line-height: 20px;
+	margin:0 0;
+}
+.column_3 h2 {
+    margin:-5px 0 0 0;
+    color:#32813b;
+}
+.column_3 h3 {
+    margin:0 0 0 0;
+    color:#32813b;
+}
+.accept_bid {
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    display: block;
+    float: right;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-top: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+a.accept_bid {
+	color: black;
+	font-size:12px;
+	font-family: "Arial", Sans-serif;
+	text-decoration: none;
+}
+
+
+.view_slideshow {
+	width: 100px;
+	margin-top: 10px;
+	float: left;
+}
+
+#number_of_images {
+	text-align: right;
+	width: 100px;
+	margin-top: 10px;
+	float: right;
+}
+
+.vehicle_listing {
+	margin-top: 0px;
+}
+
+.first_listing {
+	margin-top: 0px;
+}
+
+.last_listing {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	border-bottom: 0px solid #ccc;
+}
+
+
+/* ************** Footer Module ************** */
+
+
+#footer_module {
+	text-align: center;
+	font-size:11px;
+    margin-bottom: 20px;
+    padding:15px 30px 15px 30px;
+    text-align:left;
+}
+
+#footer_module a {
+	color:#444;
+	text-decoration:none;
+}
+
+h1.title_module {
+	margin-bottom: 0;
+}
+
+
+
+
+
+
+/* ************** Current Listings ************** */
+
+
+#current_listings .column_2 {
+	width:610px;
+}
+
+#current_listings h2 {
+	width:400px;
+	float:left;
+}
+
+#current_listings .input_holder {
+	width:100px;
+	float:right;
+	border:1px solid white;
+}
+
+/* ************** Forms ************** */
+ 
+
+input {
+	margin:0px 0;
+	border: #CCC solid 0px;
+}
+
+.form p {
+	margin-bottom:5px;
+}
+
+.hidden {
+	display:none;
+}
+
+#header input[type="text"], #header input[type="password"] {
+	position:relative;
+	padding-left:8px;
+	width:168px;
+	height:25px;
+	color:#cccccc;
+	background-color:#FFF;
+}
+
+#header input[type="submit"] {
+	padding-top:0;
+	width:100px;
+	height:25px;
+	color:#3d4649;
+	font-size:10px;
+}
+
+#header input[type="submit"]:hover {
+	color:#EA4815;
+	cursor: pointer;
+}
+
+.sellers_account {
+	width:194px;
+	/*float:left;*/
+	margin-left:5px;
+}
+
+legend {
+	font-size:18px;
+	padding-bottom:10px;	
+}
+
+select {
+	width:200px;
+	float:left;
+	margin-left:5px;
+}
+
+label {
+	display:block;
+	width:200px;
+	height:22px;
+	background-color:#EEEEEE;
+	float:left;
+	margin-bottom:1px;
+	text-align:right;
+	padding: 3px 5px 0 0;
+}
+
+.sellers_account .radio_button {
+	margin-top:7px;
+	width:15px;
+	float:left;
+	margin-right:20px;
+}
+
+.radio_label {
+	background-color:#FFFFFF;
+	width:22px;
+	float:left;
+	margin-left:5px;
+	text-align:left;
+}
+
+fieldset {
+	margin-bottom:20px;
+}
+
+textarea {
+	width:290px;
+	height:75px;
+	margin-left:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+ 

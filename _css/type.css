@@ -1,0 +1,61 @@
+body {
+color:#CCCCCC;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+
+h1 {
+font-size:18px;
+}
+
+p {
+font-size:11px;
+line-height:20px;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.highlight_color {
+color: #fd6b10;
+}
+
+.forced_link_color {
+color: #4a8fa8;
+}
+
+.result {
+color:#777777;
+}
+
+.result p {
+margin-top: 6px;
+font-size:10px;
+line-height:14px;
+
+}
+
+.result_price {
+font-weight:bold;
+color: #ff6f0f;
+}
+
+.result_name {
+height:30px;
+color:#fff;
+}
+
+a {
+color:#4a8fa8;
+text-decoration:none;
+}
+
+.paragraph_h1_heading {
+margin:40px 0 10px 0;
+}
+
+.paragraph_15px_margin_top {
+margin-top:15px;
+}
+

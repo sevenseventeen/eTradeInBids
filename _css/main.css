@@ -1,0 +1,1138 @@
+
+/* ************ Home Page *************/
+
+#steps {
+	background-color: #fff;
+	height: 320px;
+}
+
+.step {
+	float: left;
+	/*background-color: red;*/
+	margin-left: 6px;
+	padding-left: 6px;
+	width: 290px;
+	margin-top: 21px;
+	border-left: 1px solid #ccc;
+}
+
+.step.first {
+	margin-left:0px;
+	padding-left: 0px;
+	border-left: none;
+}
+
+.step h3 {
+	text-transform: uppercase;
+	font-size: 24px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.width_480 .step p {
+	margin-left: 0px;
+	width: 290px;
+	margin-top: 5px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 20px;
+}
+
+#get_started_button {
+	margin-left: 771px;
+	margin-top: 10px;
+}
+
+h3#bid_history {
+    margin:10px 0 10px 0;
+    color: #32813B;
+}
+
+h2.vin_verify {
+    color:green;
+    font-weight:normal;
+    font-size:18px;
+    padding-bottom:40px;
+    width:500px;
+}
+
+h2.vin_failure {
+    color:red;
+    font-weight:normal;
+    font-size:18px;
+    padding-bottom:40px;
+    width:500px;
+}
+
+h2.vin_failure a {
+    font-size:18px;
+}
+
+ol.numeric_list li {
+	list-style: decimal outside none;
+    margin-left: 20px;
+    padding-top:10px;
+}
+
+ol.alpha_list li {
+	list-style: lower-latin outside none;
+    margin-left: 40px;
+}
+
+ol.roman_list li {
+	list-style: lower-roman outside none;
+    margin-left: 60px;
+    padding-top:0;
+}
+
+a {
+    color: #2087D7;
+    text-decoration:none;
+    font-size:12px
+}
+
+a:hover {
+    color:#EA4815;
+}
+
+.vehicle_listings li {
+    height:20px;
+    padding:4px 0 0 5px;
+    font-size:10px;
+
+}
+
+.main_navigation_item.current_page {
+	color:#EA4815
+}
+
+.grey_background {
+    background-color:#e6e6e6;
+}
+
+.thumbnail_grid {
+	width:300px;
+}
+#remove_image_grid {
+	margin-top:20px;
+	width:903px;
+	background-color:white;
+}
+#remove_image_grid img {
+	margin:1px 1px 0 0;
+}
+
+.thumbnail {
+	margin-left:-1px;
+	float:left;
+	border-left:1px solid #ffffff;
+	border-top:1px solid #ffffff;
+	background-color:#000000;
+	height:50px; 
+	width:50px;
+	background-size:150px;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+/*.thumbnail_grid img {
+	width: 75px;
+}
+	*/
+
+/*
+#account_tab_background {
+    background-color: #979390;
+    float: left;
+    height: 38px;
+    width: 800px;
+    position:relative;
+    z-index:0;
+}
+*/
+
+.buyer_details p {
+	line-height:8px;	
+}
+
+#account_tab_background {
+    background-color: #f0f0f0;
+    height: 45px;
+    width: 606px;
+    margin-top:-30px;
+    margin-bottom:-10px;
+    z-index:0;
+}
+
+.account_tab_active {
+    display: block;
+    float: left;
+    height: 35px;
+    margin: 0 0 -15px;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 121px;
+    background-color:#FFF;
+    /*z-index:1;*/
+}
+
+.account_tab_inactive {
+    display: block;
+    float: left;
+    height: 35px;
+    margin: 0 0 -15px;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 121px;
+    /*background-color:#f0f0f0;*/
+    /*z-index: 1;*/
+}
+
+/*
+
+.account_tab_inactive.first {
+    border-left: 0 solid #FFFFFF;
+}
+
+.account_tab_inactive.last {
+    border-right: 0 solid #FFFFFF;
+}
+
+div a.account_tab_inactive {
+    color:#2087d7;
+    border-right:0px solid #FFF;
+}
+
+*/
+
+#account_tab_shadow_cover {
+    background-color:#FFF;
+    height: 1px;
+    margin: 0;
+    position: relative;
+    width: 121px;
+    z-index: 3;
+}
+
+#account_tab_shadow_cover.second_account_tab {
+	margin:0 0 0 120px;
+}
+
+#account_tab_shadow_cover.third_account_tab {
+	margin:0 0 0 241px;
+}
+
+#account_tab_shadow_cover.fourth_account_tab {
+	margin:0 0 0 362px;
+}
+
+#account_tab_shadow_cover.fifth_account_tab {
+	margin:0 0 0 484px;
+}
+
+/* ************** Body and Main Container ************** */
+
+html {
+	background-color:#b8b5ac;
+	color:#3d4649;
+}
+
+
+body {
+	text-align: center;
+	font-family: "Verdana",Sans-serif;
+	font-size:12px;
+	background-color:#b8b5ac;
+}
+
+#main_container {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	width: 960px;
+	text-align: left;
+}
+
+
+/* ************** Global ************** */
+
+.alert {
+	color:#e52404;
+}
+
+.rounded_corners {
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(/_pie.htc);
+}
+
+.left_tab {
+	-moz-border-radius:5px 0px 5px 5px;
+    -webkit-border-radius:5px 0px 5px 5px;
+    -khtml-border-radius:5px 0px 5px 5px;
+    border-radius:5px 0px 5px 5px;
+    behavior: url(/_pie.htc);
+}
+
+.right_tab {
+	-moz-border-radius:0px 5px 5px 5px;
+    -webkit-border-radius:0px 5px 5px 5px;
+    -khtml-border-radius:0px 5px 5px 5px;
+    border-radius:0px 5px 5px 5px;
+    behavior: url(/_pie.htc);
+}
+
+.drop_shadow {
+	-moz-box-shadow: 1px 1px 2px #7a7a7a;
+  	-webkit-box-shadow: 1px 1px 2px #7a7a7a;
+	box-shadow: 1px 1px 2px #7a7a7a;
+	behavior: url(/_pie.htc);
+}
+
+.inner_shadow {
+	-moz-box-shadow: inset 1px 1px 1px #7a7a7a;
+  	-webkit-box-shadow: inset 1px 1px 1px #7a7a7a;
+	box-shadow: inset 1px 1px 1px #7a7a7a;
+	position:relative;
+	z-index:10;
+	behavior: url(/_pie.htc);
+}
+
+.light_gradient {
+	background: #CCC; /*fallback for non-CSS3 browsers*/
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#FFFFFF) to(#f2f2f2)); /*old webkit*/
+    background: -webkit-linear-gradient(#FFFFFF, #f2f2f2); /*new webkit*/
+    background: -moz-linear-gradient(#FFFFFF, #f2f2f2); /*gecko*/
+    background: -ms-linear-gradient(#FFFFFF, #f2f2f2); /*IE10*/
+    background: -o-linear-gradient(#FFFFFF, #f2f2f2); /*opera 11.10+*/
+    background: linear-gradient(#FFFFFF, #f2f2f2); /*future CSS3 browsers*/
+    -pie-background: linear-gradient(#FFFFFF, #f2f2f2); /*PIE*/
+    behavior: url(/_pie.htc);
+}
+
+.blue_gradient {
+	background: #1a6fb0; /*fallback for non-CSS3 browsers*/
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#1a6fb0) to(#2087d7)); /*old webkit*/
+    background: -webkit-linear-gradient(#2087d7, #1a6fb0); /*new webkit*/
+    background: -moz-linear-gradient(#2087d7, #1a6fb0); /*gecko*/
+    background: -ms-linear-gradient(#2087d7, #1a6fb0); /*IE10*/
+    background: -o-linear-gradient(#2087d7, #1a6fb0); /*opera 11.10+*/
+    background: linear-gradient(#2087d7, #1a6fb0); /*future CSS3 browsers*/
+    -pie-background: linear-gradient(#2087d7, #1a6fb0); /*PIE*/
+    behavior: url(/_pie.htc);
+}
+
+.module_960 {
+	position:relative;
+	background-color: #FFFFFF;
+    border: 0 solid #CCCCCC;
+    margin-bottom: 20px;
+    padding: 30px;
+    width: 898px;
+    z-index:2;
+ }
+
+.dark_gradient {
+	background: #CCC; /*fallback for non-CSS3 browsers*/
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2) to(#e1e1e1)); /*old webkit*/
+    background: -webkit-linear-gradient(#f2f2f2, #e1e1e1); /*new webkit*/
+    background: -moz-linear-gradient(#f2f2f2, #e1e1e1); /*gecko*/
+    background: -ms-linear-gradient(#f2f2f2, #e1e1e1); /*IE10*/
+    background: -o-linear-gradient(#f2f2f2, #e1e1e1); /*opera 11.10+*/
+    background: linear-gradient(#f2f2f2, #e1e1e1); /*future CSS3 browsers*/
+    -pie-background: linear-gradient(#f2f2f2, #e1e1e1); /*PIE*/
+    behavior: url(/_pie.htc);
+}
+
+#header.module_960 {
+	margin-bottom: 0;
+}
+
+.module_560 {
+	float:left;
+	width: 558px;
+	border: solid 1px #cccccc;
+	margin-bottom:20px;
+	padding:20px;
+}
+
+.module_400 {
+	float:left;
+	width: 298px;
+	border: solid 1px #cccccc;
+	margin: 0 0 20px 20px;
+	padding:20px;
+}
+
+.title_module {
+	height: 28px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.clear_float {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+h1 {
+	font-family: "Verdana", serif;
+	font-size:24px;
+	margin-bottom:20px;
+	color:#EA4815;
+}
+
+.sellers_account h1, .buyers_account h1 {
+	margin:0px;
+}
+	
+
+h2 {
+	font-weight:bold;
+	font-size:14px;	
+}
+
+p {
+	margin:11px 0;
+	line-height:22px;	
+}
+
+strong {
+	font-weight:bold;
+}
+
+.error {
+	color: #e52404;
+    display: block;
+    float: left;
+    margin: 1px 0 0 10px;
+    width: 310px;
+}
+
+.column_3 .error {
+	width:200px;
+	margin-bottom:10px;
+	margin-left:25px;
+}
+
+
+
+.terms_of_use_checkbox_error .error {
+    color: red;
+    display: inline;
+    float: none;
+    margin: 1px 0 0 10px;
+}
+
+
+.button {
+	display: block;
+	width: 140px;
+	height: 25px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	text-align: center;
+	padding-top: 10px;
+	margin-left: 10px;
+	margin-bottom:10px;
+}
+
+a.button {
+	color: black;
+	font-size:12px;
+	font-family: "Arial", Sans-serif;
+	text-decoration: none;
+}
+
+
+
+.width_480 p {
+	width:518px;
+}
+
+.right_image {
+    text-align:right;
+	float:right;
+    width:350px;
+	border-left:1px dotted #CCCCCC;
+}
+
+
+p.sub_heading {
+	margin-bottom:35px;
+} 
+
+.ion_auth_error .error {
+    float: none;
+    margin: 0 0 10px 0;
+}
+
+/* ************** Header ************** */
+
+
+#header {
+	height: 85px;
+	width: 958px;
+	text-align: right;
+	padding:0px;
+	position: relative;
+	z-index:1;
+}
+
+#header img {
+    float: left;
+    margin-left: 25px;
+    margin-top: 28px;
+}
+
+#main_navigation_left {
+	position: relative;
+    margin: -5px 0 20px 0;
+    width: 615px;
+    float:left;
+    z-index:0;
+}
+
+#main_navigation_right {
+	position: relative;
+    float: right;
+    margin: -5px 2px 5px 20px;
+    width: 120px;
+}
+
+#header_login {
+	position:relative;
+	float:right;
+     display: block;
+     margin: 30px 30px 0pt 0pt;
+     width:500px;
+}
+
+
+.main_navigation_item {
+     display: block;
+     float: left;
+     height: 28px;
+     margin-left: 0px;
+     padding-top: 20px;
+     text-align: center;
+     width: 120px;
+     border-right:1px solid #ebebeb;
+    border-left:1px solid #FFFFFF;
+}
+
+.main_navigation_item.first {
+    border-left:0px solid #FFFFFF;
+}
+
+.main_navigation_item.last {
+    border-right:0px solid #FFFFFF;
+}
+
+a.main_navigation_item, a.account_tab_active, a.account_tab_inactive {
+	color: #808080;
+	font-size:12px;
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	text-decoration: none;
+}
+
+a.main_navigation_item:hover, a.account_tab_active:hover, a.account_tab_inactive:hover {
+	color:#EA4815;
+}
+
+.module_header a {
+    width: 220px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-bottom:-1px;
+    margin-right:-1px;
+    padding-top:20px;
+    float:left;
+    margin-bottom:20px;
+}
+
+/* ************** Vehicle Listing ************** */
+
+.vehicle_listing {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+.vehicle_listing img {
+    background: none repeat scroll 0 0 black;
+    float: left;
+}
+
+.vehicle_listing h2 {
+    font-size: 23px;
+    font-weight: normal;
+    margin: 0 0 -3px 0;
+    color: #95918f;
+}
+
+.vehicle_listing h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+        color: #95918f;
+}
+
+.column_1 {
+	float: left;
+	width: 298px;
+}
+
+.column_2 {
+	float: left;
+	margin-left: 10px;
+	width: 330px;
+}
+	
+.column_2 p {
+	margin: 10px 10px 10px 0;
+}
+
+/*
+.column_3 {
+	float: right;
+	margin-left: 10px;
+	width: 250px;
+	text-align: right;
+}
+*/
+
+
+.column_3 {
+    float: right;
+    margin-left: 0;
+    text-align: right;
+    width: 230px;
+}
+
+.column_3 label {
+	background:none;
+	padding: 1px 0 0 5px;
+	margin-bottom:15px;
+}
+
+.column_3 .submit_bid {
+	float:none;
+}
+
+
+
+.bid_input {
+    float: right;
+    height: 25px;
+    margin-left: 0;
+    margin-right: 5px;
+    text-align: center;
+    width: 189px;
+}
+	
+.column_3 p {
+	line-height: 20px;
+	margin:0 0;
+}
+
+.column_3 p.time_left {
+	line-height: 16px;
+	margin-top:10px;
+}
+
+
+.column_3 h2 {
+    margin:-5px 0 0 0;
+    color:#32813b;
+}
+.column_3 h3 {
+    margin:0 0 0 0;
+    color:#32813b;
+}
+.accept_bid {
+    display: block;
+    float: right;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-top: 18px;
+    text-align: center;
+    width: 250px;
+    margin-top:20px;
+}
+
+a.accept_bid {
+	color: #e4e4e4;
+	font-size:18px;
+	font-family: "Arial", Sans-serif;
+	text-decoration: none;
+}
+
+a.blue_button {
+    color: #E4E4E4;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.blue_button {
+    display: block;
+    height: 27px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 10px;
+    text-align: center;
+    width: 150px;
+}
+
+
+.view_slideshow {
+	width: 100px;
+	margin-top: 10px;
+	float: left;
+}
+
+#number_of_images {
+	text-align: right;
+	width: 100px;
+	margin-top: 10px;
+	float: right;
+}
+
+.vehicle_listing {
+	margin-top: 0px;
+}
+
+.first_listing {
+	margin-top: 0px;
+}
+
+.last_listing {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	border-bottom: 0px solid #ccc;
+}
+
+
+/* ************** Footer Module ************** */
+
+
+#footer_module {
+	text-align: center;
+	font-size:11px;
+    padding:15px 30px 15px 30px;
+    text-align:left;
+    margin-top: 20px;
+}
+
+#footer_module #links ul {
+	/*background-color: red;*/
+	float: left;
+	width:165px;
+}
+
+#footer_module #links li {
+	margin-top: 3px;
+}
+
+#footer_module #links h4 {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#social h4 {
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: 53px;
+}
+
+#footer_module a {
+	color:#444;
+	text-decoration:none;
+}
+
+
+#footer_module #social { 
+	float: right;
+	margin: 4px 0 0 0;
+	padding: 0px;
+	width: 210px;
+	height: 74px;
+	border-left: 1px solid #666;
+}
+
+#social a.google_plus {
+	display:block; 
+	height:31px; 
+	width:31px; 
+	background: url(../_images/social_icons.png) no-repeat; 
+	float:left; 
+	margin:14px 0 0 53px;
+	text-indent: -9999px;
+}
+
+#social a.twitter {
+	display:block; 
+	height:31px; 
+	width:31px; 
+	background: url(../_images/social_icons.png) no-repeat; 
+	float:left; 
+	background-position: -47px 0; 
+	margin:14px 0 0 20px;
+	text-indent: -9999px;
+}
+
+#social a.facebook {
+	display:block; 
+	height:31px; 
+	width:31px; 
+	background: url(../_images/social_icons.png) no-repeat; 
+	float:left;
+	background-position: -95px 0;
+	margin:14px 0 0 20px;
+	text-indent: -9999px;
+}
+
+#social a.google_plus:hover {
+	background-position: 0 -32px;
+}
+
+#social a.twitter:hover { 
+	background-position: -47px -32px;
+}
+
+#social a.facebook:hover {
+	background-position: -95px -32px;
+}
+
+#copyright p {
+	margin: 13px 0 50px 2px;
+	font-size: 10px;
+	color: #333;
+}
+
+h1.title_module {
+	margin-bottom: 0;
+}
+
+/* ************** Current Listings ************** */
+
+
+#current_listings .column_2 {
+	width:610px;
+}
+
+#current_listings h2 {
+	width:400px;
+	float:left;
+}
+
+#current_listings .input_holder {
+	width:100px;
+	float:right;
+	border:1px solid white;
+}
+
+/* ************** Forms ************** */
+ 
+#header input {
+	margin:1px 1px;
+	border: #CCC solid 0px;
+}
+
+
+input {
+	margin:0px 0;
+	border: #CCC solid 1px;
+	float: left;
+    margin-left: 5px;
+    width: 196px;
+}
+
+
+
+.register_submit, .login_submit, .vehicle_submit, .mail_submit, .card_update_submit, .reset_password_submit {
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:208px;
+	border: #CCC solid 0px;
+	text-align:center;
+}
+
+.submit_bid {
+    border: 0 none;
+    margin-top: 10px;
+}
+
+p.or_register {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    margin-top: 31px;
+    width: 200px;
+}
+	
+
+select.registration_expiration  {
+	width: 98px;
+}
+
+.form p {
+	margin-bottom:5px;
+}
+
+.hidden {
+	display:none;
+}
+
+#header input[type="text"], #header input[type="password"] {
+	float:none;
+	position:relative;
+	padding-left:8px;
+	width:168px;
+	height:25px;
+	color:#cccccc;
+	background-color:#FFF;
+}
+
+input[type="checkbox"] {
+	float:none;
+	position:relative;
+	padding-left:8px;
+	width:15px;
+	height:15px;
+	color:#cccccc;
+	background-color:#FFF;
+}
+
+.disabled_text {
+	color:#BBB;
+}
+
+#header input[type="submit"] {
+	float:none;
+	padding-top:0;
+	width:100px;
+	height:25px;
+	color:#3d4649;
+	font-size:10px;
+}
+
+#header input[type="submit"]:hover {
+	float:none;
+	color:#EA4815;
+	cursor: pointer;
+}
+
+.sellers_account {
+	width:194px;
+	/*float:left;*/
+	margin-left:5px;
+}
+
+legend {
+	font-size:18px;
+	padding-bottom:10px;	
+}
+
+select {
+	width:200px;
+	float:left;
+	margin-left:5px;
+}
+
+label {
+	display:block;
+	width:200px;
+	height:22px;
+	background-color:#EEEEEE;
+	float:left;
+	margin-bottom:1px;
+	text-align:right;
+	padding: 3px 5px 0 0;
+}
+
+.sellers_account .radio_button {
+	margin-top:7px;
+	width:15px;
+	float:left;
+	margin-right:20px;
+}
+
+.radio_label {
+	background-color:#FFFFFF;
+	width:22px;
+	float:left;
+	margin-left:5px;
+	text-align:left;
+}
+
+fieldset {
+	margin-bottom:20px;
+}
+
+textarea {
+	width:290px;
+	height:75px;
+	margin-left:5px;
+	float:left;
+	border:1px solid #ccc;
+}
+
+tr.header {
+	font-weight:bold;
+	height:50px;
+}
+
+table.reports, table.admin {
+	font-size:12px;
+	width:900px;
+}
+
+table.reports td, table.admin td {
+	border:1px solid #ccc;
+	width:100px;
+	text-align:center;
+}
+
+tr {
+	height:30px;	
+}
+
+#terms_of_use_scroll {
+	width:640px;
+	height:200px;
+	border:1px solid #CCC;
+	overflow:auto;
+	float:left;
+	margin-left:5px;
+	padding:10px;
+}
+
+#terms_of_use_checkbox {
+	margin-top:10px;
+	margin-left:208px;
+}
+
+.uploaded_vehicle img, .vehicle_detail img {
+	float:left;
+}
+
+.uploaded_vehicle h1, .vehicle_detail h1 {
+	margin-top:29px;
+    margin-left:318px;
+    margin-bottom:0px;
+}
+
+.uploaded_vehicle h2, .vehicle_detail h2 {
+    margin-left:320px;
+    font-weight:normal;
+}
+
+.uploaded_vehicle p, .vehicle_detail p {
+	margin-top:-3px;
+margin-bottom:30px;
+    margin-left:320px;
+    font-weight:normal;
+}
+
+.uploaded_vehicle a, .vehicle_detail a {
+    display: block;
+    margin-left: 130px;
+    padding: 6px 0 0 0;
+    width:75px;
+}
+
+.uploaded_vehicle #no_flash a {
+	display: inline;
+    margin-left:0px;
+    padding: 0 0 0 0;
+}
+
+#no_flash {
+	margin-bottom:10px;
+}
+	
+
+#file_uploadUploader {
+	float:left;
+}
+
+#uploadify_form {
+    margin-left:319px;
+}
+
+.edit_vehicle_page #uploadify_form {
+	margin-left:0px;
+}
+
+.edit_vehicle_page #im_done {
+	margin-left: 136px;
+	padding-top: 3px;
+}
+
+.address_block {
+	line-height:15px;
+}
+
+/* ******************* Frequently Asked Questions ****************/
+
+.question {
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+.answer {
+	line-height: 18px;
+}
+
+
+
+
+/* ******************* Login Failed ****************/
+
+.login_failed form {
+	margin-top:25px;
+}	
+
+
+/* ******************* Terms of Service ****************/
+	
+#terms_of_service h1 {
+	margin-top:40px;
+}
+
+/* ******************* Register Page ****************/
+	
+#register_options {
+	text-align:right;
+}
+
+
+/* ******************* Edit Account Page ****************/
+
+.my_account form {
+	margin-top:20px;
+}
+
+.my_account fieldset {
+	margin-bottom:0;
+}
+
+.my_account .password_submit, .my_account .register_submit, .update_submit {
+	margin-top:0;
+	margin-bottom:50px;
+	margin-left:208px;
+	border: #CCC solid 0px;
+	text-align:center;
+}
+
+/* ******************* Copyright ****************/

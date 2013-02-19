@@ -1,0 +1,46 @@
+form p {
+/*width:200px;*/
+margin-top:15px;
+}
+
+form {
+/*margin-top:15px;*/
+}
+
+input {
+/*display:block;*/
+}
+
+input.text_field {
+width:265px;
+}
+
+input.check_box {
+display:block;
+margin-left:255px;
+margin-top:-15px
+}
+
+input.button {
+margin-top:10px
+}
+
+/* Result Filter */
+
+#result_filter form, #result_filter .button {
+margin:0;
+}
+
+.button #result_filter {
+font-size:1px;
+}
+
+#result_filter input.text_field {
+width:60px;
+height:10px;
+font-size:9px;
+}
+
+label.disabled {
+    color: #AAAAAA;
+}
