@@ -259,11 +259,17 @@ class Data_model extends CI_Model {
 		
 	}
 	
-    // Depricated - lets use buyer and seller 
+    // TODO - Depricated - lets use buyer and seller 
     
-	function get_all_dealers(){
-		$query = $this->db->get_where('users', array('account_type' => 'buyer'));
-		return $query->result();
+	function get_all_dealers($approved_only = false){
+		$this->db->select('*');
+        $this->db->from('users');
+        $this->db->where('account_type', 'buyer');
+        if ($approved_only) {
+        	$this->db->where('approved', 'approved');
+        }
+        $query = $this->db->get();
+        return $query->result();
 	}
 	
 	function get_all_buyers(){

@@ -248,7 +248,7 @@
 					
 						<?php
 							$submit_data 	= Array('type' => 'submit', 'id' => 'submit_button'.$i, 'name' => 'submit', 'type' => 'image', 'src' => base_url().'_images/submit_bid.png', 'value' => 'submit', 'alt' => 'Submit', 'class' => 'submit_bid disabled');
-							$bid_input_data	= Array('name' => 'bid_amount', 'value' => 'Enter Bid (Numbers Only)', 'class' => 'bid_input toggle_input_value');
+							$bid_input_data	= Array('name' => 'bid_amount', 'value' => 'Enter Bid (Numbers Only)', 'class' => 'bid_input toggle_input_value currency');
 							$checkbox_data = array('name' => 'accept_terms_checkbox', 'id' => 'accept_terms_checkbox'.$i, 'value' => 'accept', 'checked' => FALSE);
 							
 							echo form_open('site/submit_bid');

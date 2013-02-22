@@ -17,11 +17,18 @@
     <link href="<?php echo base_url().'application/uploadify/uploadify.css'; ?>" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="<?php echo base_url().'_javascript/swfobject.js'; ?>"></script>
     <script type="text/javascript" src="<?php echo base_url().'_javascript/jquery.uploadify.v2.1.4.js'; ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url().'_javascript/jquery.formatCurrency-1.4.0.js'; ?>"></script>
     <script type="text/javascript">
 
     $(document).ready(function() {
 
-		// Toggle Input Fields With Default Values, Taggle Password Fields
+    	// Format Currency Fields
+
+		$('.currency').keyup(function(event) {
+			$(this).formatCurrency({roundToDecimalPlace:0});	
+		});
+
+		// Toggle Input Fields With Default Values, Toggle Password Fields
 		
 		$('#password_password').hide();
 		$('#password_password').css('color','black');

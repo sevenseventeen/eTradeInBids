@@ -27,7 +27,7 @@ $config['brand'] = "";
 
 switch ($config['server_name']) {
 	case 'localhost':
-		$config['base_url'] = 'http://localhost/development/archive.etradeinbids.com/';
+		$config['base_url'] = 'http://localhost/development/etradeinbids/';
 		break;
 	case 's1.etradeinbids.com':
 		$config['base_url'] = 'http://s1.etradeinbids.com/';

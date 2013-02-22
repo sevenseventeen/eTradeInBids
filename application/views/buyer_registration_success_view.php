@@ -15,7 +15,7 @@
 			
 		</div>
 		
-		<br class="clear_float" />
+		<!-- <br class="clear_float" /> -->
 		
 	<?php  include '_includes/footer_module.php'; ?>
 	

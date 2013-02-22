@@ -748,10 +748,12 @@ class Site extends CI_Controller {
         if (!$this->data_model->valid_credit_card($user_id)) {
             redirect('auth/register_credit_card');
         }
+
+        
 		
 		$this->load->library('form_validation');
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-		$this->form_validation->set_rules('bid_amount', 'Bid Amount', 'required|numeric');
+		$this->form_validation->set_rules('bid_amount', 'Bid Amount', 'required');
 		$this->load->model('data_model');
 		
 		if ($this->form_validation->run() == FALSE) {
@@ -762,14 +764,15 @@ class Site extends CI_Controller {
 			}
 			$this->load->view('buyers_account_active_vehicles_view', $data);
 		} else {
-			$search_for = Array('$', ',');
-			$replace_with = Array('', '');
-			$bid_amount = str_replace($search_for, $replace_with, $this->input->post('bid_amount'));
+			//$search_for = Array('$', ',');
+			//$replace_with = Array('', '');
+			//$bid_amount = str_replace($search_for, $replace_with, $this->input->post('bid_amount'));
+            $bid_amount = preg_replace("/[^0-9]/", '', $this->input->post('bid_amount'));
 			$data = array(
 				'vehicle_id'	=> $this->input->post('vehicle_id'),
 				'buyer_id' 		=> $this->input->post('buyer_id'),
 				'seller_id' 	=> $this->input->post('seller_id'),
-				'bid_amount' 	=> $bid_amount, 
+				'bid_amount' 	=> preg_replace("/[^0-9]/", '', $bid_amount),
 				'bid_time'		=> date('Y-m-d H:i:s', time()), 
 				'bid_session'   => $this->input->post('bid_session')
 			);
@@ -1029,7 +1032,7 @@ class Site extends CI_Controller {
 			$vehicle_id = $this->data_model->add_vehicle($data);
 
 			if ($vehicle_id) {
-				$all_dealers = $this->data_model->get_all_dealers();
+				$all_dealers = $this->data_model->get_all_dealers(true);
 				//$dealer_email_array = Array();
 				foreach ($all_dealers as $dealer) {
 					$vehicle_details 		= $this->data_model->get_vehicle_details($vehicle_id);
@@ -1404,7 +1407,7 @@ class Site extends CI_Controller {
         $bid_session = $vehicle_details[0]->bid_session; 
 		$result = $this->data_model->activate_vehicle($vehicle_id, $bid_session);
 		if ($result) {
-			$all_dealers = $this->data_model->get_all_dealers();
+			$all_dealers = $this->data_model->get_all_dealers(true);
 			//$dealer_email_array = Array();
             foreach ($all_dealers as $dealer) {
                 //$vehicle_details        = $this->data_model->get_vehicle_details($vehicle_id);
