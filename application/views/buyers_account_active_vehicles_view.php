@@ -239,7 +239,7 @@
                                 date_default_timezone_set('UTC');
                                 $date_added = new DateTime($vehicle_row->date_added);
                                 $now = new DateTime(date('Y-m-d H:i:s', time()));
-                                $bid_expiration = date_add($date_added, date_interval_create_from_date_string('96 hours'));
+                                $bid_expiration = date_add($date_added, date_interval_create_from_date_string('48 hours'));
                                 $interval = $bid_expiration->diff($now, TRUE);
                                 echo "<p class='time_left error'>Bidding closes in<br /> ".$interval->format('%d days, %h hours, %i minutes').".</p>";
 							?>

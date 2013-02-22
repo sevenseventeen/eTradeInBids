@@ -7,4 +7,3 @@ AddHandler php5-script .php
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php?/$1 [L]
 </IfModule>
-# Adding commit note
