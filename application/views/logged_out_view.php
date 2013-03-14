@@ -12,8 +12,6 @@
 			<?php echo "<p>".anchor('site/login', 'Click here to login.')."</p>"; ?>
 		</div>
 		
-		<br class="clear_float" />
-		
 	<?php  include '_includes/footer_module.php'; ?>
 	
 	</div>
