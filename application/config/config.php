@@ -29,15 +29,15 @@ switch ($config['server_name']) {
 	case 'localhost':
 		$config['base_url'] = 'http://localhost/development/etradeinbids/';
 		break;
-	case 's1.etradeinbids.com':
-		$config['base_url'] = 'http://s1.etradeinbids.com/';
+	case 'staging.etradeinbids.com':
+		$config['base_url'] = 'http://staging.etradeinbids.com/';
 		break;
 	case 'cutradeinbids.com':
-		$config['base_url']	= 'http://cutradeinbids.com/';
+		$config['base_url']	= 'https://cutradeinbids.com/';
 		$config['brand'] = "cutradeinbids";
 		break;
 	case 'www.cutradeinbids.com':
-		$config['base_url']	= 'http://www.cutradeinbids.com/';
+		$config['base_url']	= 'https://www.cutradeinbids.com/';
 		$config['brand'] = "cutradeinbids";
 		break;
 	default:
