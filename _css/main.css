@@ -44,7 +44,7 @@
 }
 
 h3#bid_history {
-    margin:10px 0 10px 0;
+    margin:10px 0 10px 5px;
     color: #32813B;
 }
 
@@ -96,10 +96,8 @@ a:hover {
 }
 
 .vehicle_listings li {
-    height:20px;
-    padding:4px 0 0 5px;
-    font-size:10px;
-
+	padding: 4px 0 5px 5px;
+	font-size: 11px;
 }
 
 .main_navigation_item.current_page {
@@ -597,7 +595,7 @@ a.main_navigation_item:hover, a.account_tab_active:hover, a.account_tab_inactive
 }
 	
 .column_2 p {
-	margin: 10px 10px 10px 0;
+	margin: 10px 10px 10px 5px;
 }
 
 /*
@@ -839,6 +837,13 @@ h1.title_module {
 	width:100px;
 	float:right;
 	border:1px solid white;
+}
+
+.expand_button {
+	font-size: 12px;
+	margin: 5px 0 0 5px;
+	display: block;
+	padding-bottom: 5px;
 }
 
 /* ************** Forms ************** */

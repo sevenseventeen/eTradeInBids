@@ -41,6 +41,10 @@ class Site extends CI_Controller {
         $this->form_validation->set_rules('exterior_color', 'Exterior Color', 'required');
         $this->form_validation->set_rules('interior_color', 'Interior Color', 'required');
         $this->form_validation->set_rules('mileage', 'Mileage', 'required');
+        $this->form_validation->set_rules('is_actual_mileage', 'Is Mileage Actual', 'required');
+        if ($this->input->post('is_actual_mileage') == 'No') {
+            $this->form_validation->set_rules('mileage_notes', 'Mileage Notes', 'required');    
+        }
         $this->form_validation->set_rules('original_owner', 'Original Owner', 'required');
         $this->form_validation->set_rules('any_accidents', 'Any Accidents', 'required');
         if ($this->input->post('any_accidents') == 'Yes') {
@@ -153,6 +157,8 @@ class Site extends CI_Controller {
                 'fuel_type'                     => $this->input->post('fuel_type'),
                 'drive_type'                    => $this->input->post('drive_type'),
                 'mileage'                       => str_replace (',', '', $this->input->post('mileage')),
+                'is_actual_mileage'             => $this->input->post('is_actual_mileage'),
+                'mileage_notes'                 => $this->input->post('mileage_notes'),
                 'original_owner'                => $this->input->post('original_owner'),
                 'any_accidents'                 => $this->input->post('any_accidents'),
                 'any_repainting'                => $this->input->post('any_repainting'),
@@ -843,7 +849,11 @@ class Site extends CI_Controller {
 		$this->form_validation->set_rules('fuel_type', 'Fuel Type', 'required');
 		$this->form_validation->set_rules('exterior_color', 'Exterior Color', 'required');
 		$this->form_validation->set_rules('interior_color', 'Interior Color', 'required');
-		$this->form_validation->set_rules('mileage', 'Mileage', 'required');
+        $this->form_validation->set_rules('mileage', 'Mileage', 'required');
+		$this->form_validation->set_rules('is_actual_mileage', 'Is Mileage Actual', 'required');
+        if ($this->input->post('is_actual_mileage') == 'No') {
+            $this->form_validation->set_rules('mileage_notes', 'Mileage Notes', 'required');    
+        }
 		$this->form_validation->set_rules('original_owner', 'Original Owner', 'required');
 		$this->form_validation->set_rules('any_accidents', 'Any Accidents', 'required');
 		if ($this->input->post('any_accidents') == 'Yes') {
@@ -956,7 +966,9 @@ class Site extends CI_Controller {
 			'number_of_speeds' 				=> $this->input->post('number_of_speeds'),
 			'fuel_type' 					=> $this->input->post('fuel_type'),
 			'drive_type' 					=> $this->input->post('drive_type'),
-			'mileage' 						=> str_replace (',', '', $this->input->post('mileage')),
+            'mileage'                       => str_replace (',', '', $this->input->post('mileage')),
+            'is_actual_mileage'             => $this->input->post('is_actual_mileage'),
+			'mileage_notes' 				=> $this->input->post('mileage_notes'),
 			'original_owner' 				=> $this->input->post('original_owner'),
 			'any_accidents' 				=> $this->input->post('any_accidents'),
 			'any_repainting' 				=> $this->input->post('any_repainting'),

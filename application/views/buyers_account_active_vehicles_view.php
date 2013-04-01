@@ -144,7 +144,7 @@
 							
 						</ul>
 						
-						<a href="#" id="expand_button<?php echo $i; ?>">Toggle Details</a>  
+						<a href="#" class="expand_button" id="expand_button<?php echo $i; ?>">Toggle Details</a>  
 						
 						<div id="expanding_div<?php echo $i; ?>">
 							<ul>

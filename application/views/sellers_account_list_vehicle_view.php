@@ -117,6 +117,7 @@
 			$("#approximate_payoff_container").hide(); 
 			$("#leinholder_name_container").hide();
 			$("#accident_repair_history_container").hide();
+			$("#not_actual_mileage_notes_container").hide();
 
 //			$("#submit_button").fadeTo(0, .3);
 //			
@@ -150,11 +151,19 @@
 				}
 			});
 
+			$("#is_actual_mileage").change(function () {
+				if($(this).val() == "Yes") {
+					$("#not_actual_mileage_notes_container").hide();
+				} else {
+					$("#not_actual_mileage_notes_container").fadeTo(0, 1);
+				}
+			});
+
 			<?php if ($this->session->userdata('any_accidents') == "Yes") { ?>
-			$("#accident_repair_history_container").fadeTo(0, 1);
-		<?php } else { ?>
-			$("#accident_repair_history_container").hide();
-		<?php } ?>
+				$("#accident_repair_history_container").fadeTo(0, 1);
+			<?php } else { ?>
+				$("#accident_repair_history_container").hide();
+			<?php } ?>
 
 		});
 
@@ -448,6 +457,7 @@
 			$state_options							= array('' => '', 'Alabama' => 'Alabama',	'Alaska' => 'Alaska',	'Arizona' => 'Arizona',	'Arkansas' => 'Arkansas',	'California' => 'California',	'Colorado' => 'Colorado',	'Connecticut' => 'Connecticut',	'Delaware' => 'Delaware',	'District of Columbia' => 'District of Columbia',	'Florida' => 'Florida',	'Georgia' => 'Georgia',	'Guam' => 'Guam',	'Hawaii' => 'Hawaii',	'Idaho' => 'Idaho',	'Illinois' => 'Illinois',	'Indiana' => 'Indiana',	'Iowa' => 'Iowa',	'Kansas' => 'Kansas',	'Kentucky' => 'Kentucky',	'Louisiana' => 'Louisiana',	'Maine' => 'Maine',	'Maryland' => 'Maryland',	'Massachusetts' => 'Massachusetts',	'Michigan' => 'Michigan',	'Minnesota' => 'Minnesota',	'Mississippi' => 'Mississippi',	'Missouri' => 'Missouri',	'Montana' => 'Montana',	'Nebraska' => 'Nebraska',	'Nevada' => 'Nevada',	'New Hampshire' => 'New Hampshire',	'New Mexico' => 'New Mexico',	'New York' => 'New York',	'North Carolina' => 'North Carolina',	'North Dakota' => 'North Dakota',	'Ohio' => 'Ohio',	'Oklahoma' => 'Oklahoma',	'Oregon' => 'Oregon',	'Pennsylvania' => 'Pennsylvania',	'Puerto Rico' => 'Puerto Rico',	'Rhode Island' => 'Rhode Island',	'South Carolina' => 'South Carolina',	'South Dakota' => 'South Dakota',	'Tennessee' => 'Tennessee',	'Texas' => 'Texas',	'Utah' => 'Utah',	'Vermont' => 'Vermont',	'Virginia' => 'Virginia',	'Virgin Islands' => 'Virgin Islands',	'Washington' => 'Washington',	'West Virginia' => 'West Virginia',	'Wisconsin' => 'Wisconsin',	'Wyoming' => 'Wyoming');    
     		$registration_expiration_month_options 	= array('' => '', '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8', '9' => '9', '10' => '10', '11' => '11', '12' => '12'); 
     		$registration_expiration_year_options 	= array('' => '', '2006' => '2006', '2007' => '2007', '2008' => '2008', '2009' => '2009', '2010' => '2010', '2011' => '2011', '2012' => '2012', '2013' => '2013', '2014' => '2014');
+    		$is_actual_mileage_options			 	= array('' => '', 'Yes' => 'Yes', 'No' => 'No');
     		
     		?>
     		
@@ -613,22 +623,64 @@
 				
 															<?php //echo form_dropdown('exterior_color', $dd_list,                set_value($dd_name, ( ( !empty($sl_val) ) ? "$sl_val" : 3 ) ) ,'id="dropdown"');?> 
 				
-				<label>Exterior Color</label>				<?php echo form_dropdown('exterior_color', $exterior_color_options, set_value('exterior_color', '')); ?>																<?php echo form_error('exterior_color'); ?><br class="clear_float" />
+				<label>Exterior Color</label>				
+
+				<?php echo form_dropdown('exterior_color', $exterior_color_options, set_value('exterior_color', '')); ?>																
+				<?php echo form_error('exterior_color'); ?>
+				<br class="clear_float" />
 				
+				<label>Interior Color</label>				
+
+				<?php echo form_dropdown('interior_color', $interior_color_options, set_value('interior_color', '')); ?>
+				<?php echo form_error('interior_color'); ?>
+				<br class="clear_float" />
 				
+				<label>Mileage</label>						
 				
-				<label>Interior Color</label>				<?php echo form_dropdown('interior_color', $interior_color_options, set_value('interior_color', '')); ?>																<?php echo form_error('interior_color'); ?><br class="clear_float" />
-				<label>Mileage</label>						<?php echo form_input('mileage', set_value('mileage')); ?>																						<?php echo form_error('mileage'); ?><br class="clear_float" />
-				<label>Orginal Owner</label>				<?php echo form_dropdown('original_owner', $original_owner_options, set_value('original_owner', ''), 'id="drive_type"'); ?>																<?php echo form_error('original_owner'); ?><br class="clear_float" />
-				<label>Any Accidents</label>				<?php echo form_dropdown('any_accidents', $any_accidents_options, set_value('any_accidents', ''), 'id="any_accidents"'); ?>																		<?php echo form_error('any_accidents'); ?><br class="clear_float" />
+				<?php echo form_input('mileage', set_value('mileage')); ?>
+				<?php echo form_error('mileage'); ?>
+				<br class="clear_float" />
+
+				<label>Is Mileage Actual</label>
+
+				<?php echo form_dropdown('is_actual_mileage', $is_actual_mileage_options, set_value('is_actual_mileage', ''), 'id="is_actual_mileage"'); ?>	
+				<?php echo form_error('is_actual_mileage'); ?>
+				<br class="clear_float" />
+
+				<div id="not_actual_mileage_notes_container">
+					<label>Additional Mileage Information</label>		
+					<textarea id="mileage_notes" name="mileage_notes">Please detail any additional information regarding mileage.</textarea>
+					<?php echo form_error('mileage_notes'); ?>
+					<br class="clear_float" />
+				</div>
+				
+				<!-- TODO (Why does that say drive_type under original owner section) -->
+
+				<label>Orginal Owner</label>				
+				<?php echo form_dropdown('original_owner', $original_owner_options, set_value('original_owner', ''), 'id="drive_type"'); ?>																
+				<?php echo form_error('original_owner'); ?>
+
+				<br class="clear_float" />
+				
+				<label>Any Accidents</label>				
+				<?php echo form_dropdown('any_accidents', $any_accidents_options, set_value('any_accidents', ''), 'id="any_accidents"'); ?>																		
+				<?php echo form_error('any_accidents'); ?>
+
+				<br class="clear_float" />
 				
 				<div id="accident_repair_history_container">
 					<label>Accident/Repair History</label>		
-					<textarea id="accident_repair_history" name="accident_repair_history">Please list date and amount of repairs for any accidents.</textarea><?php echo form_error('accident_repair_history'); ?>
+					<textarea id="accident_repair_history" name="accident_repair_history">Please list date and amount of repairs for any accidents.</textarea>
+					<?php echo form_error('accident_repair_history'); ?>
 					<br class="clear_float">
 				</div>
 				
-				<label>Any Repainting</label>				<?php echo form_dropdown('any_repainting', $any_repainting_options, set_value('any_repainting', ''), 'id="drive_type"'); ?>																<?php echo form_error('any_repainting'); ?><br class="clear_float" />
+				<label>Any Repainting</label>				
+				<?php echo form_dropdown('any_repainting', $any_repainting_options, set_value('any_repainting', ''), 'id="drive_type"'); ?>																
+				<?php echo form_error('any_repainting'); ?>
+
+				<br class="clear_float" />
+
 				<!-- <label>Loan Balance</label>  -->		<?php //echo form_input('loan_balance', set_value('loan_balance')); ?>																			<?php //echo form_error('loan_balance'); ?><!-- <br class="clear_float" /> -->
 				<label>Vehicle Location - Street</label>	<?php echo form_input('vehicle_location_street', set_value('vehicle_location_street')); ?>	<?php echo form_error('vehicle_location_street'); ?><br class="clear_float" />
 				<label>Vehicle Location - City</label>		<?php echo form_input('vehicle_location_city', set_value('vehicle_location_city')); ?>					<?php echo form_error('vehicle_location_city'); ?><br class="clear_float" />

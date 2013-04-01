@@ -138,7 +138,7 @@
 							
 						</ul>
 						
-						<a href="#" id="expand_button<?php echo $i; ?>">Toggle Details</a>  
+						<a href="#" class="expand_button" id="expand_button<?php echo $i; ?>">Toggle Details</a>  
                         
                         <div id="expanding_div<?php echo $i; ?>">
                             <ul>
@@ -148,6 +148,9 @@
                                 <li>Number of Speeds:           <?php echo $row->number_of_speeds; ?></li>
                                 <li>Fuel Type:                  <?php echo $row->fuel_type; ?></li>
                                 <li>Original Owner:             <?php echo $row->original_owner; ?></li>
+                                <li>Mileage: 					<?php echo $row->mileage; ?></li>
+                                <li>Is Actual Mileage: 			<?php echo $row->is_actual_mileage; ?></li>
+                                <li>Mileage Notes:				<?php echo $row->mileage_notes; ?></li>
                                 <li>Any Accidents:              <?php echo $row->any_accidents; ?></li>
                                 <li>Accident/Repair History:    <?php echo $row->accident_repair_history; ?></li>
                                 <li>Any Repainting:             <?php echo $row->any_repainting; ?></li>
@@ -227,7 +230,7 @@
 								}
 								echo "</ul>";
 							} else {
-								echo "There have been no bids received.";
+								echo "<p>There have been no bids received.</p>";
 							}
 							
 						?>

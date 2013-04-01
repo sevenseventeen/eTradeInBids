@@ -100,8 +100,23 @@
     			
     			$("#approximate_payoff_container").hide(); 
     			$("#leinholder_name_container").hide();
-    			$("#accident_repair_history_container").hide();
-    
+
+    			<?php if ($vehicle_details[0]->any_accidents != "Yes") { ?>
+    				$("#accident_repair_history_container").hide();
+    			<?php } ?>
+
+    			<?php if ($vehicle_details[0]->is_actual_mileage != "No") { ?>
+    				$("#not_actual_mileage_notes_container").hide();
+    			<?php } ?>
+
+    			$("#is_actual_mileage").change(function () {
+					if($(this).val() == "Yes") {
+						$("#not_actual_mileage_notes_container").hide();
+					} else {
+						$("#not_actual_mileage_notes_container").fadeTo(0, 1);
+					}
+				});
+
     			$("#any_accidents").change(function () {
     				if($(this).val() != "Yes") {
     					$("#accident_repair_history_container").hide();
@@ -337,6 +352,7 @@
 			$leinholder_name_data 					= array('name' => 'leinholder_name', 'id' => 'leinholder_name');
     		$registration_expiration_month_options 	= array('' => '', '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8', '9' => '9', '10' => '10', '11' => '11', '12' => '12'); 
     		$registration_expiration_year_options 	= array('' => '', '2006' => '2006', '2007' => '2007', '2008' => '2008', '2009' => '2009', '2010' => '2010', '2011' => '2011', '2012' => '2012', '2013' => '2013', '2014' => '2014');
+    		$is_actual_mileage_options			 	= array('' => '', 'Yes' => 'Yes', 'No' => 'No');
 			$state_options							= array(
                 '' => '', 
                 'Alabama' => 'Alabama',	
@@ -575,7 +591,19 @@
 				    <?php echo form_input('mileage', set_value('mileage', $vehicle_details[0]->mileage)); ?>
 				    <?php echo form_error('mileage'); ?>
 				    <br class="clear_float" />
+
+				<label>Actual Mileage</label>						
+				    <?php echo form_dropdown('is_actual_mileage', $is_actual_mileage_options, set_value('is_actual_mileage', $vehicle_details[0]->is_actual_mileage), 'id="is_actual_mileage"'); ?>
+				    <?php echo form_error('is_actual_mileage'); ?>
+				    <br class="clear_float" />
 				
+				    <div id="not_actual_mileage_notes_container">
+						<label>Additional Mileage Information</label>		
+						<textarea id="mileage_notes" name="mileage_notes"><?php echo $vehicle_details[0]->mileage_notes; ?></textarea>
+						<?php echo form_error('mileage_notes'); ?>
+						<br class="clear_float" />
+					</div>
+
 				<label>Orginal Owner</label>				
 				    <?php echo form_dropdown('original_owner', $original_owner_options, set_value('original_owner', $vehicle_details[0]->original_owner), 'id="drive_type"'); ?>
 				    <?php echo form_error('original_owner'); ?>
