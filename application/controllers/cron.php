@@ -12,7 +12,7 @@ class Cron extends CI_Controller {
 		$this->load->model('data_model');
 		$all_vehicles_for_sale = $this->data_model->get_all_vehicles_for_sale();
 
-        error_log("Testing");
+        error_log("Testing 123");
 		
 		foreach ($all_vehicles_for_sale as $vehicle) {
 		    
