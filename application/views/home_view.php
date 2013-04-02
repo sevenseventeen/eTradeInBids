@@ -25,7 +25,11 @@
 				<div class="step">
 					<img src="<?php echo base_url().'_images/step3.jpg'; ?>">
 					<h3>Step 3.</h3>
-					<p>Choose a date and place for your car to be picked up and receive the payment.</p>
+					<?php if ($this->config->item('brand') == "cutradeinbids") { ?>
+						<p>Choose a date and credit union branch to release your car and receive payment.</p>
+					<?php } else { ?>
+						<p>Choose a date and place for your car to be picked up and receive the payment.</p>
+					<?php } ?>
 				</div>
 			</div>
 			<br class="clear_float" />
