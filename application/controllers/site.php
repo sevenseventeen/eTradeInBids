@@ -170,7 +170,7 @@ class Site extends CI_Controller {
                 'state_of_registration'         => $this->input->post('state_of_registration'),
                 'registration_expiration_month' => $this->input->post('registration_expiration_month'),
                 'registration_expiration_year'  => $this->input->post('registration_expiration_year'),
-                'main_image_path'               => $this->input->post('main_image_path'),
+                // 'main_image_path'               => $this->input->post('main_image_path'),
                 'paint_body_condition'          => $this->input->post('paint_body_condition'),
                 'glass_condition'               => $this->input->post('glass_condition'),
                 'tires_condition'               => $this->input->post('tires_condition'),
