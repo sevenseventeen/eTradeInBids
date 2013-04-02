@@ -24,14 +24,12 @@ class Cron extends CI_Controller {
     }
 
     function process_expired_card ($buyer_email) {
-        
         $this->load->model('data_model');
         $this->data_model->deactivate_credit_card($buyer_email);
-
         $from_email = $this->config->item('email_from_support');
         $from_name = $this->config->item('email_name_from_alerts');
         $bcc_email = $this->config->item('email_to_josh');
-        $message = "Hello,\n\n It looks like the credit card we have on file has expired. Please take a moment to update your card as soon as possible to avoid interuption of your account access. To update your card, please login at https://www.etradeinbids.com and choose 'My Account' then the 'Edit My Account' tab. \n\nThanks for using eTradeInBids.\n\n";
+        $message = "Hello,\n\n It looks like the credit card we have on file has expired. Please take a moment to update your card as soon as possible to avoid account interuption. To update your card, please login at https://www.etradeinbids.com and choose 'My Account.' Then, choose the 'Edit My Account' tab. \n\nThanks for using eTradeInBids.\n\n";
         $this->load->library('email');
         $this->email->clear();
         $this->email->from($from_email, $from_name);
@@ -43,24 +41,20 @@ class Cron extends CI_Controller {
     }
 	
 	function check_listing_duration() {
-	    
 		date_default_timezone_set('UTC');
 		$this->load->model('data_model');
 		$all_vehicles_for_sale = $this->data_model->get_all_vehicles_for_sale();
-
 		foreach ($all_vehicles_for_sale as $vehicle) {
-		    
             $date_added         = new DateTime($vehicle->date_added);
             $now                = new DateTime(date('Y-m-d H:i:s', time()));
             $interval           = date_diff($date_added, $now, FALSE);
             $hours              = $interval->format('%h');
             $day_hours          = $interval->format('%d') * 24;
             $total_hours        = $day_hours+$hours;
-            
             switch ($total_hours) {
-                    
+
                 case 24:
-                    
+                   
                     $vehicle_id = $vehicle->vehicle_id;
                     $buyer_id_array = array();
                     $all_buyers = $this->data_model->get_all_buyers();
@@ -75,7 +69,6 @@ class Cron extends CI_Controller {
                             $from_name = $this->config->item('email_name_from_alerts');
                             $bcc_email = $this->config->item('email_to_josh');
                             $message = "Just a reminder, bidding on the ".$vehicle_year." ".$vehicle_make." ".$vehicle_model." will close in 24 hours and it looks like you haven't placed a bid. Please login to bid at https://www.etradeinbids.com. \n\nThanks for using eTradeInBids\n\n";
-                            
                             $this->load->library('email');
                             $this->email->clear();
                             $this->email->from($from_email, $from_name);

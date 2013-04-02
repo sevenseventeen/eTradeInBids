@@ -42,9 +42,6 @@
 						
 						<br class="clear_float" />
 						
-						<div class="view_slideshow">
-							<a class='<?php echo $row->vehicle_id; ?>' href='<?php echo base_url()."_uploads/".$row->main_image_path; ?>'>View Slideshow</a>
-						</div>
 						
 						<?php echo get_image_paths($results, $row->vehicle_id); ?>
 						
