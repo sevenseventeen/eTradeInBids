@@ -1,4 +1,5 @@
 AddHandler php5-script .php
+AddType text/x-component .htc
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{REQUEST_URI} ^system.*
