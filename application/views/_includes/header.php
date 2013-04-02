@@ -1,3 +1,9 @@
+<?php 
+	if ($this->config->item('test_mode') == TRUE) { 
+		echo '<div id="test_mode"><p class="error">Test Mode</p></div>'; 
+	} 
+?>
+
 <div id="header" class="module_960 drop_shadow rounded_corners dark_gradient">
 	<?php if ($this->config->item('brand') == "cutradeinbids") { ?>
 		<a href="<?php echo base_url(); ?>site/"><img alt="etradeinbids_logo" src="<?php echo base_url(); ?>_images/cutradeinbids_logo.png" /></a>
@@ -31,8 +37,6 @@
 	<br class="clear_float" />
 	
 </div>
-
-<?php if ($this->config->item('test_mode') == TRUE) { echo '<p class="error">Test Mode</p>'; } ?>
 
 <div id="main_navigation_right" class="drop_shadow rounded_corners light_gradient">
 	
