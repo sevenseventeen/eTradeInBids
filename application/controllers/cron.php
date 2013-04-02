@@ -11,6 +11,8 @@ class Cron extends CI_Controller {
 		date_default_timezone_set('UTC');
 		$this->load->model('data_model');
 		$all_vehicles_for_sale = $this->data_model->get_all_vehicles_for_sale();
+
+        error_log("Testing");
 		
 		foreach ($all_vehicles_for_sale as $vehicle) {
 		    
