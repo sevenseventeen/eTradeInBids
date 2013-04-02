@@ -578,26 +578,25 @@ class Data_model extends CI_Model {
 	}
     
 	
-	public function register_creditcard_info($id,$payment_type,$card_number,$cvv,$card_expiration_month,$card_expiration_year) {
-		$this->db->where('id', $id);
+	// public function register_creditcard_info($id,$payment_type,$card_number,$cvv,$card_expiration_month,$card_expiration_year) {
+	// 	$this->db->where('id', $id);
 		
-		echo $id;
+	// 	echo $id;
 		
-			$result = $this->db->update(
-			'buyers_accounts', 
-				array(
-						'payment_type' 	=> $payment_type, 
-						'card_number' 		=>$card_number, 
-						'cvv' 	=> $cvv, 
-						'card_expiration_month'	=> $card_expiration_month,
-						'card_expiration_year'			=> $card_expiration_year
-					)
-				);
+	// 		$result = $this->db->update(
+	// 		'buyers_accounts', 
+	// 			array(
+	// 					'payment_type' 	=> $payment_type, 
+	// 					'card_number' 		=>$card_number, 
+	// 					'cvv' 	=> $cvv, 
+	// 					'card_expiration_month'	=> $card_expiration_month,
+	// 					'card_expiration_year'			=> $card_expiration_year
+	// 				)
+	// 			);
 	
-	}
+	// }
+
 	function delete_vehicle($vehicle_id) {
-		//$result = $this->db->delete('vehicles', array('vehicle_id' => $vehicle_id));
-		//return $result;
 		$data = array('listing_status' => 'deleted');
 		$this->db->where('vehicle_id', $vehicle_id);
 		$result = $this->db->update('vehicles', $data);
@@ -636,6 +635,12 @@ class Data_model extends CI_Model {
 		return $query;
 	}
 
+	function deactivate_credit_card ($email) {
+		$this->db->where('email', $email);
+		$query = $this->db->update('users', array('credit_card_validation' => 'declined'));
+		return $query;	
+	}
+
 	function expire_bid_status($vehicle_id){
 		$data = array('bid_status' => 'expired');
 		$this->db->where('vehicle_id', $vehicle_id);
@@ -664,12 +669,16 @@ class Data_model extends CI_Model {
 		return $query->result();
 	}
 	
-	function register_stripe_id($stripe_id,$email) {
-		$this->db->where('email',$email);
-		$query = $this->db->update('users',array('stripe_id'=>$stripe_id, 'credit_card_validation'=>'approved'));
+	function register_stripe_id($stripe_id, $email, $card_expiration_month, $card_expiration_year) {
+		$this->db->where('email', $email);
+		$query = $this->db->update('users', array(
+			'stripe_id'					=> $stripe_id, 
+			'credit_card_validation'	=> 'approved',
+			'card_expiration_month'		=> $card_expiration_month,
+			'card_expiration_year'		=> $card_expiration_year
+		));
 		return $query;
 	}
-	
 
 	function get_transactions_to_invoice_by_buyer($buyer_id){
 		$this->db->select('*, bids.bid_id');

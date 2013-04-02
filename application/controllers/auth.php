@@ -680,24 +680,12 @@ function update_forgotten_password() {
 		
 		
 		if ($this->form_validation->run() == true) {
-			//$id						= $this->input->post('id');
-			//$email					= $this->input->post('email');
 			$payment_type 			= $this->input->post('payment_type');
 			$card_number			= $this->input->post('card_number');
 			$cvv 					= $this->input->post('cvv');
 			$card_expiration_month	= $this->input->post('card_expiration_month');
 			$card_expiration_year	= $this->input->post('card_expiration_year');
-			
-			//$this->ion_auth->register_creditcard_info($id,$payment_type,$card_number,$cvv,$card_expiration_month,$card_expiration_year);
-			
-			// $stripe_config['stripe_key_test_public']         = 'pk_m9mjcmI1XxXkcqIk83awd3EPKeCRh';
-	        // $stripe_config['stripe_key_test_secret']         = '3InMbRrGf9vK1HD6P8PW13RWsExh9niE';
-	        // $stripe_config['stripe_key_live_public']         = '';
-	        // $stripe_config['stripe_key_live_secret']         = '';
-	        // $stripe_config['stripe_test_mode']               = TRUE;
-	        // $stripe_config['stripe_verify_ssl']              = FALSE;
-	        
-	        $stripe_config = $this->config->item('stripe_config');
+	        $stripe_config 			= $this->config->item('stripe_config');
 	        $this->load->library('stripe', $stripe_config);
 	
 	        //requiredThe card number, as a string without any separators.exp_monthrequiredTwo digit number representing the card's expiration month.exp_yearrequiredFour digit number representing the card's expiration year.cvcoptional, highly recommendedCard security codenameoptional, recommendedCardholder's full name.
@@ -725,7 +713,7 @@ function update_forgotten_password() {
 			if (!property_exists($json_response_decoded, 'error')) {
 				$stripe_id = $json_response_decoded->id;
 				$this->load->model('data_model');
-				$this->data_model->register_stripe_id($stripe_id, $email);
+				$this->data_model->register_stripe_id($stripe_id, $email, $card_expiration_month, $card_expiration_year);
 	        	redirect('site/buyer_registration_success');
 		    } else {
 				$this->load->model('data_model');
@@ -788,9 +776,6 @@ function update_forgotten_password() {
 	        ); 
 	
 	        $json_response = $this->stripe->customer_create($card, $email);
-			
-			
-			
 	        $json_response_decoded = json_decode($json_response);
 			
 			//var_dump(property_exists($json_response_decoded, 'error'));
@@ -808,7 +793,7 @@ function update_forgotten_password() {
 				$this->load->model('data_model');
 				$user_details = $this->data_model->get_user_details($email);
 				$stripe_id = $json_response_decoded->id;
-				$this->data_model->register_stripe_id($stripe_id, $email);
+				$this->data_model->register_stripe_id($stripe_id, $email, $card_expiration_month, $card_expiration_year);
         		redirect('site/buyer_registration_success');
 				
 				
@@ -896,7 +881,7 @@ function update_credit_card_info() {
 			if (!property_exists($json_response_decoded, 'error')) {
 				$stripe_id = $json_response_decoded->id;
 				$this->load->model('data_model');
-				$this->data_model->register_stripe_id($stripe_id, $email);
+				$this->data_model->register_stripe_id($stripe_id, $email, $card_expiration_month, $card_expiration_year);
 	        	redirect('site/credit_card_update_success');
 		    } else {
 				//$this->load->model('data_model');
