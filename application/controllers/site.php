@@ -1228,11 +1228,11 @@ class Site extends CI_Controller {
 		}
 			
 		elseif ($accepted_bid_amount >= 10001 && $accepted_bid_amount < 20000) {
-				$charge_customer = $this->stripe->charge_customer(30000, $customer_id, $desc );
+			$charge_customer = $this->stripe->charge_customer(30000, $customer_id, $desc );
 		}
 			
-		elseif ($accepted_bid_amount >= 20001) {
-				$charge_customer = $this->stripe->charge_customer(35000, $customer_id, $desc );
+		elseif ($accepted_bid_amount >= 20000) {
+			$charge_customer = $this->stripe->charge_customer(35000, $customer_id, $desc );
 		}
         
         // TODO - If there's an error, we should let the transaction proceed, send an email to admin, and charge the dealer manually.
