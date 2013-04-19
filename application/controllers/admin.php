@@ -68,6 +68,7 @@ class Admin extends CI_Controller {
 	}
 	
 	function vehicle_details($vehicle_id) {
+		date_default_timezone_set('UTC');
 		$this->load->model('data_model');
 		$vehicle_details  = $this->data_model->get_vehicle_details($vehicle_id);
 		$vehicle_bid_details  = $this->data_model->get_vehicle_bid_details($vehicle_id);
