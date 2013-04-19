@@ -1,6 +1,6 @@
 <?php 
 	if ($this->config->item('test_mode') == TRUE) { 
-		echo '<div id="test_mode"><p class="error">Test Mode</p></div>'; 
+		echo '<div id="test_mode"><p class="error">Test Mode.</p></div>'; 
 	} 
 ?>
 
