@@ -33,7 +33,7 @@ switch ($config['server_name']) {
 		$config['base_url'] = 'http://staging.etradeinbids.com/';
 		break;
 	case 'cutradeinbids.com':
-		$config['base_url']	= 'https://cutradeinbids.com/';
+		$config['base_url']	= 'https://www.cutradeinbids.com/';
 		$config['brand'] = "cutradeinbids";
 		break;
 	case 'www.cutradeinbids.com':
