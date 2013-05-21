@@ -18,6 +18,12 @@
 						$("#i_agree_text").fadeIn();
 					}
 				});
+				$("#submit_button").click(function() {
+					if(	$('[name="userfile"]').val() == ""	) {
+						alert ("Sorry, all fields are required. You must choose an image for your vehicle before proceeding.");
+						return false;
+					}
+				});
 			});
 		</script>	
 			
