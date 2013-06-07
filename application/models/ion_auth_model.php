@@ -711,7 +711,7 @@ class Ion_auth_model extends CI_Model
 						'business_city'						=> $additional_data['business_city'],
 						'business_state'					=> $additional_data['business_state'],
 						'business_zip_code'					=> $additional_data['business_zip_code'],
-						'fax_number'						=> $additional_data['fax_number'],
+						//'fax_number'						=> $additional_data['fax_number'],
 						'telephone_number'					=> $additional_data['telephone_number']
 						 );
 
