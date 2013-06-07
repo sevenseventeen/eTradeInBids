@@ -607,13 +607,13 @@ class Ion_auth_model extends CI_Model
 	    
 		$data = array(	
 						'user_id'							=> $additional_data['user_id'],
-						'title'								=> $additional_data['title'],
-						'business_name'						=> $additional_data['business_name'],
+						//'title'								=> $additional_data['title'],
+						//'business_name'						=> $additional_data['business_name'],
 						'business_street_address'			=> $additional_data['business_street_address'],
 						'business_city'						=> $additional_data['business_city'],
 						'business_state'					=> $additional_data['business_state'],
 						'business_zip_code'					=> $additional_data['business_zip_code'],
-						'fax_number'						=> $additional_data['fax_number'],
+						//'fax_number'						=> $additional_data['fax_number'],
 						'telephone_number'					=> $additional_data['telephone_number'],
 						
 					);
@@ -687,7 +687,7 @@ class Ion_auth_model extends CI_Model
 			'last_login' 	=> now(),
 			'active'     	=> 1,
 	    	'approved'		=> 'approved'
-			 );
+		);
 
 	    if ($this->store_salt) {
 			$data['salt'] = $salt;
@@ -705,8 +705,8 @@ class Ion_auth_model extends CI_Model
 	    $id = $this->db->insert_id();
 	    
 	    $data = array(	'user_id'							=> $id,
-						'business_name'						=> $additional_data['business_name'],
-						'title'								=> $additional_data['title'],
+						//'business_name'						=> $additional_data['business_name'],
+						//'title'								=> $additional_data['title'],
 						'business_street_address'			=> $additional_data['business_street_address'],
 						'business_city'						=> $additional_data['business_city'],
 						'business_state'					=> $additional_data['business_state'],

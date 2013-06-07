@@ -427,13 +427,13 @@ class Auth extends Controller {
 		$this->form_validation->set_rules('first_name', 'First Name', 'required');
 		$this->form_validation->set_rules('last_name', 'Last Name', 'required');
 		$this->form_validation->set_rules('email', 'Email Address', 'required|valid_email');
-		$this->form_validation->set_rules('business_name', 'Business Name', 'required|max_length[50]');
-		$this->form_validation->set_rules('title', 'Title', 'required|max_length[50]');
+		//$this->form_validation->set_rules('business_name', 'Business Name', 'required|max_length[50]');
+		//$this->form_validation->set_rules('title', 'Title', 'required|max_length[50]');
 		$this->form_validation->set_rules('business_street_address', 'Business Street Address', 'required|max_length[50]');
 		$this->form_validation->set_rules('business_city', 'Business City', 'required|max_length[50]');
 		$this->form_validation->set_rules('business_state', 'Business State', 'required|max_length[50]');
 		$this->form_validation->set_rules('business_zip_code', 'Business Zip Code', 'required|max_length[9]|numeric');
-		$this->form_validation->set_rules('fax_number', 'Fax Number', 'required|max_length[50]');
+		//$this->form_validation->set_rules('fax_number', 'Fax Number', 'required|max_length[50]');
 		$this->form_validation->set_rules('telephone_number', 'Telephone Number', 'required|max_length[50]');
 		
 		if ($this->form_validation->run() == true) {
@@ -444,14 +444,14 @@ class Auth extends Controller {
 			$additional_data 	= array(
 													
 											'user_id' => $this->input->post('user_id'),
-											'business_name' => $this->input->post('business_name'),
-											'title' => $this->input->post('title'),	
+											//'business_name' => $this->input->post('business_name'),
+											//'title' => $this->input->post('title'),	
 											'business_street_address' => $this->input->post('business_street_address'),	
 											'business_city' => $this->input->post('business_city'),	
 											'business_state' => $this->input->post('business_state'),	
 											'business_zip_code' => $this->input->post('business_zip_code'),	
 											'bank_contact_name' => $this->input->post('bank_contact_name'),	
-											'fax_number' => $this->input->post('fax_number'),	
+											//'fax_number' => $this->input->post('fax_number'),	
 											'telephone_number' => $this->input->post('telephone_number'),
 										
 								);
@@ -907,13 +907,13 @@ function update_credit_card_info() {
 		$this->form_validation->set_rules('first_name', 'First Name', 'required');
 		$this->form_validation->set_rules('last_name', 'Last Name', 'required');
 		$this->form_validation->set_rules('email', 'Email Address', 'required|valid_email');
-		$this->form_validation->set_rules('business_name', 'Business Name', 'required|max_length[50]');
-		$this->form_validation->set_rules('title', 'Title', 'required|max_length[50]');
+		//$this->form_validation->set_rules('business_name', 'Business Name', 'required|max_length[50]');
+		//$this->form_validation->set_rules('title', 'Title', 'required|max_length[50]');
 		$this->form_validation->set_rules('business_street_address', 'Business Street Address', 'required|max_length[50]');
 		$this->form_validation->set_rules('business_city', 'Business City', 'required|max_length[50]');
 		$this->form_validation->set_rules('business_state', 'Business State', 'required|max_length[50]');
 		$this->form_validation->set_rules('business_zip_code', 'Business Zip Code', 'required|max_length[9]|numeric');
-		$this->form_validation->set_rules('fax_number', 'Fax Number', 'required|max_length[50]');
+		//$this->form_validation->set_rules('fax_number', 'Fax Number', 'required|max_length[50]');
 		$this->form_validation->set_rules('telephone_number', 'Telephone Number', 'required|max_length[50]');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[4]|max_length[20]|matches[password_confirmation]');
 		$this->form_validation->set_rules('password_confirmation', 'Password Confirmation', 'required');
@@ -925,13 +925,21 @@ function update_credit_card_info() {
 			$last_name 			= $this->input->post('last_name');
 			$email 				= $this->input->post('email');
 			$password 			= $this->input->post('password');
-			$additional_data 	= array(	'business_name' => $this->input->post('business_name'),
+			/* $additional_data 	= array(	'business_name' => $this->input->post('business_name'),
 											'title' => $this->input->post('title'),	
 											'business_street_address' => $this->input->post('business_street_address'),	
 											'business_city' => $this->input->post('business_city'),	
 											'business_state' => $this->input->post('business_state'),	
 											'business_zip_code' => $this->input->post('business_zip_code'),	
 											'fax_number' => $this->input->post('fax_number'),	
+											'telephone_number' => $this->input->post('telephone_number'),
+											'approved' => 'approved'	
+								);*/
+			$additional_data 	= array(	'business_street_address' => $this->input->post('business_street_address'),	
+											'business_city' => $this->input->post('business_city'),	
+											'business_state' => $this->input->post('business_state'),	
+											'business_zip_code' => $this->input->post('business_zip_code'),	
+											//'fax_number' => $this->input->post('fax_number'),	
 											'telephone_number' => $this->input->post('telephone_number'),
 											'approved' => 'approved'	
 								);

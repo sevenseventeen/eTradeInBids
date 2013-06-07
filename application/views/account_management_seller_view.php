@@ -70,13 +70,27 @@
 					<label>First Name</label>									<?php echo form_input('first_name', set_value('first_name', $sellers_account_data[0]->first_name)); ?>																		<?php echo form_error('first_name'); ?><br class="clear_float" />
 					<label>Last Name</label>									<?php echo form_input('last_name', set_value('last_name',$sellers_account_data[0]->last_name)); ?>																			<?php echo form_error('last_name'); ?><br class="clear_float" />
 					<label>Email Address/Login</label>							<?php echo form_input('email', set_value('email',$sellers_account_data[0]->email)); ?>																						<?php echo form_error('email'); ?><br class="clear_float" />
-					<label>Business Name</label>								<?php echo form_input('business_name', set_value('business_name' , $sellers_account_data[0]->business_name)); ?>																	<?php echo form_error('dealer_name'); ?><br class="clear_float" />	
-					<label>Title</label>										<?php echo form_input('title', set_value('title', $sellers_account_data[0]->title)); ?>																						<?php echo form_error('title'); ?><br class="clear_float" />
+					
+					<!-- <label>Business Name</label>								
+					<?php //echo form_input('business_name', set_value('business_name' , $sellers_account_data[0]->business_name)); ?>																	
+					<?php //echo form_error('dealer_name'); ?>
+					<br class="clear_float" />	 -->
+					
+					<!-- <label>Title</label>
+					<?php //echo form_input('title', set_value('title', $sellers_account_data[0]->title)); ?>
+					<?php //echo form_error('title'); ?>
+					<br class="clear_float" /> -->
+					
 					<label>Business Street Address</label>						<?php echo form_input('business_street_address', set_value('business_street_address', $sellers_account_data[0]->business_street_address)); ?>								<?php echo form_error('business_street_address'); ?><br class="clear_float" />
 					<label>Business City</label>								<?php echo form_input('business_city', set_value('business_city' , $sellers_account_data[0]->business_city)); ?>																<?php echo form_error('business_city'); ?><br class="clear_float" />
 					<label>Business State</label>								<?php echo form_input('business_state', set_value('business_state', $sellers_account_data[0]->business_state)); ?>															<?php echo form_error('business_state'); ?><br class="clear_float" />
 					<label>Business Zip Code</label>							<?php echo form_input('business_zip_code', set_value('business_zip_code' ,$sellers_account_data[0]->business_zip_code)); ?>													<?php echo form_error('business_zip_code'); ?><br class="clear_float" />
-					<label>Fax Number</label>									<?php echo form_input('fax_number', set_value('fax_number', $sellers_account_data[0]->fax_number)); ?>												<?php echo form_error('bank_contact_phone'); ?><br class="clear_float" />
+					
+					<!-- <label>Fax Number</label>									
+					<?php //echo form_input('fax_number', set_value('fax_number', $sellers_account_data[0]->fax_number)); ?>
+					<?php //echo form_error('bank_contact_phone'); ?>
+					<br class="clear_float" /> -->
+					
 					<label>Telephone Number</label>								<?php echo form_input('telephone_number', set_value('telephone_number',$sellers_account_data[0]->telephone_number)); ?>							<?php echo form_error('business_telephone_number'); ?><br class="clear_float" />
 																				<?php echo form_hidden('user_id', set_value('user_id', $sellers_account_data[0]->user_id)); ?>	
 					
