@@ -10,7 +10,7 @@
  * 
  */
 
-$config['test_mode'] = TRUE;
+$config['test_mode'] = FALSE;
 
 if ($_SERVER['SERVER_NAME'] == "localhost" || $config['test_mode'] == TRUE) {
     $config['email_from_support']               = 'KNIGHT1902@roadrunner.com';
