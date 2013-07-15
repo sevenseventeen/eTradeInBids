@@ -1366,7 +1366,7 @@ class Site extends CI_Controller {
 						
 					$failed_bidder_details = $this->data_model->get_user_by_id($bidder_id);
 					$failed_bidder_email = $failed_bidder_details[0]->email;
-					$failed_bidder_message = "Sorry, the seller of the ".$vehicle_year." ".$vehicle_make." ".$vehicle_model." did not accept your bid. Please click here https://www.etradeinbids.com to bid on other vehicles. Thanks for using eTradeInBids\n\n";
+					$failed_bidder_message = "The seller of the ".$vehicle_year." ".$vehicle_make." ".$vehicle_model." accepted a higher bid. Please click here https://www.etradeinbids.com to bid on other vehicles. Thanks for using eTradeInBids\n\n";
                     $from_email = $this->config->item('email_from_support');
                     $from_name = $this->config->item('email_name_from_alerts');
                     $bcc_email = $this->config->item('email_to_josh');

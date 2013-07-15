@@ -49,7 +49,6 @@ class Data_model extends CI_Model {
 		return $query->result();
 	}
 	
-	
 	function get_buyers_account_data ($user_id) {
 		$this->db->select('*, buyers_accounts.user_id');
 		$this->db->from('users');
