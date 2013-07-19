@@ -9,8 +9,8 @@
 		
 		<div id="register_options" class="module_960 drop_shadow rounded_corners">
 			
-			<?php echo anchor('site/register_buyer', 'Register as a Buyer'); ?><br />
-			<?php echo anchor('site/register_seller', 'Register as a Seller'); ?>
+			<?php echo anchor('site/register_seller', 'Register to Sell Your Car Here'); ?><br />
+			<?php echo anchor('site/register_buyer', 'Register to be a Certified Dealer'); ?>
 			
 		</div>
 		
