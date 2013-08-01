@@ -492,23 +492,17 @@ class Site extends CI_Controller {
 	}
 
 	function sellers_account_active_vehicles() {
-        echo "<pre>";
-        print_r($this->session);
-        echo "</pre>";
 		if (!$this->ion_auth->logged_in()) {
-            echo "logged in";
-			//redirect('site/login');
-		} else {
-            echo "not logged in."
-        }
-		// $this->load->model('data_model');
-		// $data = array();
-		// $data['results'] = array();
-		// $user_id = $this->session->userdata('user_id');
-		// if ($query = $this->data_model->get_all_active_listings_by_user($user_id)) {
-		// 	$data['results'] = $query;
-		// }
-		// $this->load->view('sellers_account_active_vehicles_view', $data);
+			redirect('site/login');
+		}
+		$this->load->model('data_model');
+		$data = array();
+		$data['results'] = array();
+		$user_id = $this->session->userdata('user_id');
+		if ($query = $this->data_model->get_all_active_listings_by_user($user_id)) {
+			$data['results'] = $query;
+		}
+		$this->load->view('sellers_account_active_vehicles_view', $data);
 	}
 
 	function sellers_account_inactive_vehicles() {
