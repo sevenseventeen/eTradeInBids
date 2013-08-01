@@ -499,7 +499,7 @@ class Site extends CI_Controller {
             echo "logged in";
 			//redirect('site/login');
 		} else {
-            echo "not logged in.";
+            echo "not logged in."
         }
 		// $this->load->model('data_model');
 		// $data = array();
