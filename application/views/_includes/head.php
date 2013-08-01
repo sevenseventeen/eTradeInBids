@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>eTradeInBids</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/reset.css'; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/main.css'; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/jquery.lightbox-0.5.css'; ?>" media="screen" />
