@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>eTradeInBids</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/reset.css'; ?>" />
