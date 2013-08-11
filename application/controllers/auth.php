@@ -43,6 +43,9 @@ class Auth extends Controller {
 
 	//log the user in
 	function login() {
+
+		$this->session->sess_destroy();
+
 		$this->data['title'] = "Login";
 		
 		if ($this->ion_auth->logged_in()) { //already logged in so no need to access this page
