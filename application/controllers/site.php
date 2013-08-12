@@ -595,7 +595,12 @@ class Site extends CI_Controller {
 	}
 
 	function login() {
-		$this->load->view('login_view');
+        if ($this->ion_auth->logged_in()) {
+            redirect('site/my_account');
+        } else {
+            $this->load->view('login_view');    
+        }
+		
 	}
 
 	function logged_out() {

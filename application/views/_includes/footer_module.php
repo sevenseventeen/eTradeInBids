@@ -3,12 +3,12 @@
         	<ul>
             	<li><h4>Sell Your Vehicle</h4></li>
                 <li><a href="<?php echo base_url(); ?>site/register_seller">Register</a></li>
-                <li><a href="<?php echo base_url(); ?>auth/login">Post A Vehicle</a></li>
+                <li><a href="<?php echo base_url(); ?>site/login">Seller Login</a></li>
             </ul>
         	<ul>
             	<li><h4>Authorized Dealer</h4></li>
                 <li><a href="<?php echo base_url(); ?>site/register_buyer">Register Dealership</a></li>
-                <li><a href="<?php echo base_url(); ?>login">Dealer Login</a></li>
+                <li><a href="<?php echo base_url(); ?>site/login">Dealer Login</a></li>
             </ul>
         	<ul>
             	<li><h4>Information</h4></li>
@@ -30,7 +30,7 @@
         </div>
         <div id="social">
         	<h4>Connect With Us</h4>
-        	<a href="#" class="google_plus">eTradeInBids Google Plus</a>
+        	<!-- <a href="#" class="google_plus">eTradeInBids Google Plus</a> -->
         	<a href="http://www.twitter.com/etradeinbids" target="_blank" class="twitter">eTradeInBids Twitter</a>
         	<a href="http://www.facebook.com/pages/ETradeInBids/213253855475017" target="blank" class="facebook">eTradeInBids Facebook</a>
         </div>

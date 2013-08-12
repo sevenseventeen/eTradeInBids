@@ -25,7 +25,7 @@
 			
 				<?php echo form_close(); ?>
 			
-				<p class="or_register">Or, <?php echo anchor('register', 'Register'); ?></p>
+				<p class="or_register">Or, <?php echo anchor('site/register', 'Register'); ?></p>
 				<br class="clear_float" />
 			
 			<?php } else { ?>

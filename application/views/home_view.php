@@ -10,7 +10,7 @@
 		?>
 		
 		<div class="module_960 drop_shadow rounded_corners light_gradient width_480">
-			<a href="<?php echo base_url(); ?>site/register_seller"><img src="<?php echo base_url().'_images/home_page_main_image.jpg'; ?>" /></a>
+			<a href="<?php echo base_url(); ?>site/login"><img src="<?php echo base_url().'_images/home_page_main_image.jpg'; ?>" /></a>
 			<div id="steps">
 				<div class="step first">
 					<img src="<?php echo base_url().'_images/step1.jpg'; ?>">
