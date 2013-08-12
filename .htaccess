@@ -2,6 +2,15 @@ AddHandler php5-script .php
 AddType text/x-component .htc
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    RewriteEngine on
+	
+	RewriteCond %{HTTP_HOST} ^etradeinbids.com [NC]
+	RewriteRule ^(.*)$ https://www.etradeinbids.com/$1 [L,R=301,NC]
+
+	RewriteCond %{HTTP_HOST} ^cutradeinbids.com [NC]
+	RewriteRule ^(.*)$ https://www.cutradeinbids.com/$1 [L,R=301,NC]
+
     RewriteCond %{REQUEST_URI} ^system.*
     RewriteRule ^(.*)$ /index.php?/$1 [L]
     RewriteCond %{REQUEST_FILENAME} !-f
