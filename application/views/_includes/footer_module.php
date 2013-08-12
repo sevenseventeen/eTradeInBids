@@ -38,4 +38,5 @@
 	</div>
     <div id="copyright">
         <p>&copy; Copyright 2011-2013 eTradeInBids, LLC. - All Rights Reserved - 1-888-541-5576</p>
+        <p><?php echo $_SERVER['SERVER_ADDR']; ?></p>
     </div>
