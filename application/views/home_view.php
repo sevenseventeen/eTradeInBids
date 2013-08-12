@@ -14,17 +14,17 @@
 			<div id="steps">
 				<div class="step first">
 					<img src="<?php echo base_url().'_images/step1.jpg'; ?>">
-					<h3>Step 1.</h3>
+					<h3>Step 1:</h3>
 					<p>Upload an image of your car as well as some basic details.</p>
 				</div>
 				<div class="step">
 					<img src="<?php echo base_url().'_images/step2.jpg'; ?>">
-					<h3>Step 2.</h3>
+					<h3>Step 2:</h3>
 					<p>Start receiving bids on your car and choose to accept the highest offer.</p>
 				</div>
 				<div class="step">
 					<img src="<?php echo base_url().'_images/step3.jpg'; ?>">
-					<h3>Step 3.</h3>
+					<h3>Step 3:</h3>
 					<?php if ($this->config->item('brand') == "cutradeinbids") { ?>
 						<p>Choose a date and credit union branch to release your car and receive payment.</p>
 					<?php } else { ?>
