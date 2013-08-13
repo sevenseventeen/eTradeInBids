@@ -676,7 +676,8 @@
 				
 				<div id="accident_repair_history_container">
 					<label>Accident/Repair History</label>		
-					<textarea id="accident_repair_history" name="accident_repair_history">Please list date and amount of repairs for any accidents.</textarea>
+					<!-- <textarea id="accident_repair_history" name="accident_repair_history">Please list date and amount of repairs for any accidents.</textarea> -->
+					<?php echo form_textarea('accident_repair_history', set_value('accident_repair_history', 'Please list date and amount of repairs for any accidents.'), 'id="accident_repair_history"'); ?>	
 					<?php echo form_error('accident_repair_history'); ?>
 					<br class="clear_float">
 				</div>
@@ -841,7 +842,9 @@
 																<?php echo form_error('flood_damage'); ?>
 																<br class="clear_float">
 
-				<label>Additional Condition Information</label>	<textarea id="additional_condition_information" name="additional_condition_information">Please list any additional condition information.</textarea><?php echo form_error('additional_condition_information'); ?><br class="clear_float" /><p>&nbsp;</p>															
+				<label>Additional Condition Information</label>
+				<?php echo form_textarea('additional_condition_information', set_value('additional_condition_information', 'Please list any additional condition information.'), 'id="additional_condition_information"'); ?>
+				<?php echo form_error('additional_condition_information'); ?><br class="clear_float" /><p>&nbsp;</p>
  				
 				
 				<?php //include '_includes/vehicle_options_base.php'; ?>

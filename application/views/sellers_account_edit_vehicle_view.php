@@ -103,6 +103,8 @@
 
     			<?php if ($vehicle_details[0]->any_accidents != "Yes") { ?>
     				$("#accident_repair_history_container").hide();
+    			<?php } else { ?>
+    				$("#accident_repair_history_container").show();
     			<?php } ?>
 
     			<?php if ($vehicle_details[0]->is_actual_mileage != "No") { ?>
