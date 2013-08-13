@@ -1,11 +1,8 @@
-
 application/config/database.php
 _uploads
 _thumbnails
 _attachments
 _txt
 sftp-config.json
-
 etradeinbids.sublime-project
-
 etradeinbids.sublime-workspace
