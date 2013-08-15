@@ -81,6 +81,7 @@ $autoload['helper'] = array('url', 'form', 'file');
 */
 
 //$autoload['config'] = array('config_etradeinbids');
+$autoload['config'] = array();
 
 
 /*

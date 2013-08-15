@@ -84,14 +84,6 @@ if ($_SERVER['SERVER_NAME'] == "localhost" || $config['test_mode'] == TRUE) {
     );
 }
 
-// if ($_SERVER['SERVER_NAME'] == "localhost" ) {
-//     $config['base_url'] = 'http://localhost/development/archive.etradeinbids.com/';
-// } else if ($_SERVER['SERVER_NAME'] == "s1.etradeinbids.com" ) {
-//     $config['base_url'] = 'http://s1.etradeinbids.com/';
-// } else {
-// 	$config['base_url']	= 'https://www.etradeinbids.com/';
-// }
-
 /*
 |--------------------------------------------------------------------------
 | Index File
