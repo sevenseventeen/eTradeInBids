@@ -10,9 +10,7 @@
  * 
  */
 
-$config['test_mode'] = TRUE;
 $config['brand_url'] = $_SERVER['SERVER_NAME'];
-
 
 if ($_SERVER['SERVER_NAME'] == "localhost" || $config['test_mode'] == TRUE) {
     $config['email_from_support']               = 'KNIGHT1902@roadrunner.com';

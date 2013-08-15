@@ -28,20 +28,25 @@ $config['brand'] = "";
 switch ($config['server_name']) {
 	case 'localhost':
 		$config['base_url'] = 'http://localhost/development/etradeinbids/';
+		$config['test_mode'] = TRUE;
 		break;
 	case 'staging.etradeinbids.com':
 		$config['base_url'] = 'http://staging.etradeinbids.com/';
+		$config['test_mode'] = TRUE;
 		break;
 	case 'cutradeinbids.com':
 		$config['base_url']	= 'https://www.cutradeinbids.com/';
+		$config['test_mode'] = FALSE;
 		$config['brand'] = "cutradeinbids";
 		break;
 	case 'www.cutradeinbids.com':
 		$config['base_url']	= 'https://www.cutradeinbids.com/';
+		$config['test_mode'] = FALSE;
 		$config['brand'] = "cutradeinbids";
 		break;
 	default:
 		$config['base_url']	= 'https://www.etradeinbids.com/';
+		$config['test_mode'] = FALSE;
 		break;
 }
 
