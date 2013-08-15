@@ -37,11 +37,11 @@ class Image_model extends CI_Model {
 		//****************  Add vehicle data to database *****************/
 		
 		if (!$vehicle_id) {
-			//return FALSE;
+			// TODO - It seems like this should return an error.
             $data = array ('vehicle_id' => 'false', 'image_name' => 'false', 'is_main_image' => 0);
             $result = $this->db->insert('vehicle_images', $data);
 		} else {
-			$data = array ('vehicle_id' => $vehicle_id, 'image_name' => $file_name, 'is_main_image' => 0);
+			$data = array ('vehicle_id' => $vehicle_id, 'image_name' => base_url()."_thumbnails/".$file_name, 'is_main_image' => 0);
 			$result = $this->db->insert('vehicle_images', $data);
 			return $result;
 		}

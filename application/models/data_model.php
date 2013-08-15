@@ -335,7 +335,7 @@ class Data_model extends CI_Model {
     		// $this->image_lib->initialize($config); 
     		// $this->image_lib->resize();
     		
-    		$data['main_image_path'] = $image_data['file_name'];
+    		$data['main_image_path'] = base_url()."_thumbnails/".$image_data['file_name'];
 		
     		$result = $this->db->insert('vehicles', $data);
             
@@ -343,7 +343,7 @@ class Data_model extends CI_Model {
     			$vehicle_id = $this->db->insert_id();
                 $vehicle_image_data = array(
                     'vehicle_id'    =>  $vehicle_id,
-                    'image_name'    =>  $image_data['file_name']
+                    'image_name'    =>  base_url()."_thumbnails/".$image_data['file_name']
                 );
                 $this->db->insert('vehicle_images', $vehicle_image_data);
     			return $vehicle_id;

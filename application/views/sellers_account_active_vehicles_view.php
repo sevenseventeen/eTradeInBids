@@ -24,18 +24,10 @@
 			<h1>Your Active Listings</h1>
 		</div>
 		
-		<?php 
-		
-		//echo "<pre>";
-		//print_r($results);
-		//echo "</pre>";
-		
-		?>
-		
-		<?php include '_includes/get_image_paths.php'?>
+		<?php include '_includes/get_image_paths.php' ?>
         <script type="text/javascript" src="<?php echo base_url().'_javascript/slideshow.js'; ?>"></script>
 		
-<!--		<div class="module_960" id="sellers_listings">-->
+<!--		<div class="module_960" id="sellers_listings"> -->
 		
 			<?php $old_vehicle_id = 0; ?>
 			<?php
@@ -60,13 +52,9 @@
 				
 					<div class="column_1">
 				
-						<img src=<?php echo base_url()."_thumbnails/".$row->main_image_path; ?> />
+						<img src=<?php echo $row->main_image_path; ?> />
 						
 						<br class="clear_float" />
-					    <!--
-						<div class="view_slideshow">
-							<a class='<?php echo $row->vehicle_id; ?>' href='<?php echo base_url()."_uploads/".$row->main_image_path; ?>'>View Slideshow</a>
-						</div>-->
 						
 						<?php echo get_image_paths($results, $row->vehicle_id); ?>
 						

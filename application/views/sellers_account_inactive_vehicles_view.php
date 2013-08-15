@@ -38,7 +38,7 @@
 				<div class="module_960 drop_shadow rounded_corners vehicle_listing vehicle_listings">
 					<div class="column_1">
 				
-						<img src=<?php echo base_url()."_thumbnails/".$row->main_image_path; ?> />
+						<img src=<?php echo $row->main_image_path; ?> />
 						
 						<br class="clear_float" />
 						

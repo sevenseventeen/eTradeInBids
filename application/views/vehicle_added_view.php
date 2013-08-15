@@ -26,7 +26,7 @@
 		<?php foreach ($result as $row) { ?>
 		
 		<div class="module_960 rounded_corners drop_shadow uploaded_vehicle">
-			<img alt="vehicle_image" src="<?php echo base_url()."_thumbnails/".$row->main_image_path; ?>" />
+			<img alt="vehicle_image" src="<?php echo $row->main_image_path; ?>" />
 			<h2>Success! Your <?php echo $row->year.' '.$row->make.' '.$row->model ?> has been uploaded.</h2>
 			<h1>Next, Upload Additional Photos</h1>
 			<p>Uploading additional photos leads to higher bids.</p>

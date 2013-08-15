@@ -743,8 +743,8 @@ class Site extends CI_Controller {
         
 		$file = $this->input->post('filearray');
 		$data['json'] = json_decode($file);
+
 		$this->load->model('image_model');
-		//print_r($data);
 		$this->image_model->process_uploadify_image($data);
 	}
 

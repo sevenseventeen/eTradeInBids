@@ -6,7 +6,7 @@
 			if ($row->vehicle_id == $vehicle_id) {
 			   // echo $row->image_name."<br />";
 				if ($row->image_name != '') {
-					$image_paths .= "<div style='background-image:url(".base_url()."_thumbnails/".$row->image_name.")'; class='thumbnail'></div>";
+					$image_paths .= "<div style='background-image:url(".$row->image_name.")'; class='thumbnail'></div>";
 				}
 			}
 		}

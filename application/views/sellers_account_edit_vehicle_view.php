@@ -934,7 +934,7 @@
 		    <div id="remove_image_grid">
                 <?php 
                     foreach ($vehicle_images as $vehicle_image) {
-                        echo '<a href="'.base_url().'site/delete_image/'.$vehicle_image->vehicle_id.'/'.$vehicle_image->image_id.'" ><img src="'.base_url().'_thumbnails/'.$vehicle_image->image_name.'" /></a>';
+                        echo '<a href="'.base_url().'site/delete_image/'.$vehicle_image->vehicle_id.'/'.$vehicle_image->image_id.'" ><img src="'.$vehicle_image->image_name.'" /></a>';
                     }
                 ?>
             </div>
