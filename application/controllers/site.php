@@ -236,7 +236,7 @@ class Site extends CI_Controller {
             $result = $this->data_model->update_vehicle($vehicle_id, $data);
 
             if ($result) {
-                $this->session->set_flashdata('message', 'value');
+                $this->session->set_flashdata('test', 'value');
                 redirect("site/edit_vehicle/".$vehicle_id);
             } else {
                 echo "Sorry, there was a problem with the update.";
