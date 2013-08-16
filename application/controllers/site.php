@@ -250,12 +250,12 @@ class Site extends CI_Controller {
     
     function edit_vehicle($vehicle_id) {
 
-        echo "Edit Vehicle Function";
+        echo "Edit Vehicle Function<br />";
         echo "Logged IN: ".$this->ion_auth->logged_in();
 
-        // if (!$this->ion_auth->logged_in()) {
-        //     redirect('site/login');
-        // }
+        if (!$this->ion_auth->logged_in()) {
+            redirect('site/login');
+        }
         
         // !!!! Also need to check if it's a seller
         
