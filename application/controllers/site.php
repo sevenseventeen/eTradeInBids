@@ -239,7 +239,8 @@ class Site extends CI_Controller {
                 //echo "Update Vehicle Test 7";
                 //$this->session->set_flashdata('message', 'Success! Your listing has been updated.');
                 //$this->session->set_flashdata('item', 'value');
-                redirect("site/edit_vehicle/".$vehicle_id);
+                //redirect("site/edit_vehicle/".$vehicle_id);
+                redirect();
             } else {
                 echo "Sorry, there was a problem with the update.";
             }
