@@ -233,16 +233,16 @@ class Site extends CI_Controller {
                 'bid_session'                    => 0
             );
 
-            $updated = $this->data_model->update_vehicle($vehicle_id, $data);
+            //$updated = $this->data_model->update_vehicle($vehicle_id, $data);
 
-            if ($updated) {
-                $this->session->set_flashdata('message', 'Success! Your listing has been updated.');
-                echo "Update Vehicle Test 5";
-                //redirect("site/edit_vehicle/".$vehicle_id);
+            echo "Update Vehicle Test 6";
 
-            } else {
-                echo "Sorry, there was a problem with the update.";
-            }
+            // if ($updated) {
+            //    $this->session->set_flashdata('message', 'Success! Your listing has been updated.');
+            //     redirect("site/edit_vehicle/".$vehicle_id);
+            // } else {
+            //     echo "Sorry, there was a problem with the update.";
+            // }
         }
     }
     
