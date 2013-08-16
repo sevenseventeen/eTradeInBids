@@ -240,8 +240,8 @@ class Site extends CI_Controller {
                 //$this->session->set_flashdata('message', 'Success! Your listing has been updated.');
                 //$this->session->set_flashdata('item', 'value');
                 //redirect("site/edit_vehicle/".$vehicle_id);
-                echo "Vehicle ID: ".$vehicle_id;
-                //redirect();
+                // echo "Vehicle ID: ".$vehicle_id;
+                redirect("site/edit_vehicle/".$vehicle_id);
             } else {
                 echo "Sorry, there was a problem with the update.";
             }
@@ -249,9 +249,13 @@ class Site extends CI_Controller {
     }
     
     function edit_vehicle($vehicle_id) {
-        if (!$this->ion_auth->logged_in()) {
-            redirect('site/login');
-        }
+
+        echo "Edit Vehicle Function";
+        echo "Logged IN: ".$this->ion_auth->logged_in();
+
+        // if (!$this->ion_auth->logged_in()) {
+        //     redirect('site/login');
+        // }
         
         // !!!! Also need to check if it's a seller
         
