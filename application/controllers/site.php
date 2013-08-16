@@ -233,9 +233,9 @@ class Site extends CI_Controller {
                 'bid_session'                    => 0
             );
 
-            //$updated = $this->data_model->update_vehicle($vehicle_id, $data);
+            $updated = $this->data_model->update_vehicle($vehicle_id, $data);
 
-            echo "Update Vehicle Test 6";
+            echo "Update Vehicle Test 7";
 
             // if ($updated) {
             //    $this->session->set_flashdata('message', 'Success! Your listing has been updated.');
