@@ -4,224 +4,222 @@ class Site extends CI_Controller {
     
     function update_vehicle(){
 
-        echo "Update Vehicle Test";
-
-        // date_default_timezone_set('UTC');
-        // if (!$this->ion_auth->logged_in()) {
-        //     redirect('site/login');
-        // }
-        // $vehicle_id = $this->input->post('vehicle_id');
-        // $year_make_model_style_selections = array(
-        //     'year'  => $this->input->post('year'),
-        //     'make'  => $this->input->post('make'),
-        //     'model' => $this->input->post('model'),
-        //     'style' => $this->input->post('style')
-        // );
-        // $any_accidents_value = array(
-        //     'any_accidents' => $this->input->post('any_accidents')
-        // );
-        // $this->session->set_userdata($year_make_model_style_selections);
-        // $this->session->set_userdata($any_accidents_value);
-        // $this->load->model('data_model');
-        // $this->load->library('form_validation');
-        // $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-        // $this->form_validation->set_rules('year', 'Year', 'required|numeric');
-        // $this->form_validation->set_rules('make', 'Make', 'required');
-        // $this->form_validation->set_rules('model', 'Model', 'required');
-        // $this->form_validation->set_rules('style', 'Style', 'required');
-        // $this->form_validation->set_rules('drive_type', 'Drive Type', 'required');
-        // $this->form_validation->set_rules('vin', 'VIN', 'required|exact_length[17]|alpha_numeric');
-        // $this->form_validation->set_rules('upholstery_type', 'Upholstery Type', 'required');
-        // $this->form_validation->set_rules('number_of_cylinders', 'Number of Cylinders', 'required');
-        // $this->form_validation->set_rules('transmission_type', 'Transmission Type', 'required');
-        // $this->form_validation->set_rules('number_of_speeds', 'Number of Speeds', 'required');
-        // $this->form_validation->set_rules('fuel_type', 'Fuel Type', 'required');
-        // $this->form_validation->set_rules('exterior_color', 'Exterior Color', 'required');
-        // $this->form_validation->set_rules('interior_color', 'Interior Color', 'required');
-        // $this->form_validation->set_rules('mileage', 'Mileage', 'required');
-        // $this->form_validation->set_rules('is_actual_mileage', 'Is Mileage Actual', 'required');
-        // if ($this->input->post('is_actual_mileage') == 'No') {
-        //     $this->form_validation->set_rules('mileage_notes', 'Mileage Notes', 'required');    
-        // }
-        // $this->form_validation->set_rules('original_owner', 'Original Owner', 'required');
-        // $this->form_validation->set_rules('any_accidents', 'Any Accidents', 'required');
-        // if ($this->input->post('any_accidents') == 'Yes') {
-        //     $this->form_validation->set_rules('accident_repair_history', 'Accident Repair History', 'required');    
-        // }
-        // $this->form_validation->set_rules('any_repainting', 'Any Repainting', 'required');
-        // $this->form_validation->set_rules('vehicle_location_street', 'Vehicle Street Location', 'required');
-        // $this->form_validation->set_rules('vehicle_location_city', 'Vehicle Location City', 'required');
-        // $this->form_validation->set_rules('vehicle_location_state', 'Vehcile Location State', 'required');
-        // $this->form_validation->set_rules('vehicle_location_zip', 'Vehicle Location Zip', 'required');
-        // $this->form_validation->set_rules('license_plate_number', 'License Plate Number', 'required');
-        // $this->form_validation->set_rules('state_of_registration', 'State of Registration', 'required');
-        // $this->form_validation->set_rules('registration_expiration_month', 'Registration Month', 'required');
-        // $this->form_validation->set_rules('registration_expiration_year', 'Registration Year', 'required');
-        // $this->form_validation->set_rules('power_steering', 'Power Steering', 'required');
-        // $this->form_validation->set_rules('air_conditioning', 'Air Conditioning', 'required');
-        // $this->form_validation->set_rules('power_windows', 'Power Windows', 'required');
-        // $this->form_validation->set_rules('power_door_locks', 'Power Door Locks', 'required');
-        // $this->form_validation->set_rules('cruise_control', 'Cruise Control', 'required');
-        // $this->form_validation->set_rules('cd_player_changer', 'CD Player/Changer', 'required');
-        // $this->form_validation->set_rules('premium_sound', 'Premium Sound', 'required');
-        // $this->form_validation->set_rules('integrated_phone', 'Integrated Phone', 'required');
-        // $this->form_validation->set_rules('dual_airbags', 'Dual Airbags', 'required');
-        // $this->form_validation->set_rules('four_wheel_abs_brakes', 'Four Wheel ABS Brakes', 'required');
-        // $this->form_validation->set_rules('traction_control', 'Traction Control', 'required');
-        // $this->form_validation->set_rules('power_seat', 'Power Seat', 'required');
-        // $this->form_validation->set_rules('dual_power_seats', 'Dual Power Seat', 'required');
-        // $this->form_validation->set_rules('flip_up_moon_roof', 'Flip-up Moon Roof', 'required');
-        // $this->form_validation->set_rules('privacy_glass', 'Privacy Glass', 'required');
-        // $this->form_validation->set_rules('navigation', 'Navigation', 'required');
-        // $this->form_validation->set_rules('entertainment_system_dvd', 'Entertainment System/DVD', 'required');
-        // $this->form_validation->set_rules('oversized_off_road_tires', 'Oversized/Off Road Tires', 'required');
-        // $this->form_validation->set_rules('roof_rack', 'Roof Rack', 'required');
-        // $this->form_validation->set_rules('running_boards', 'Running Boards', 'required');
-        // $this->form_validation->set_rules('sliding_rear_window', 'Sliding Rear Window', 'required');
-        // $this->form_validation->set_rules('bed_liner', 'Bed Liner', 'required');
-        // $this->form_validation->set_rules('canopy_shell', 'Canopy Shell', 'required');
-        // $this->form_validation->set_rules('quad_seating', 'Quad Seating', 'required');
-        // $this->form_validation->set_rules('tilt_steering_wheel', 'Tilt Steering Wheel', 'required');
-        // $this->form_validation->set_rules('all_wheel_drive', 'All Wheel Drive', 'required');
-        // $this->form_validation->set_rules('alloy_wheels', 'Alloy Wheels', 'required');
-        // $this->form_validation->set_rules('towing_package', 'Towing Package', 'required');
-        // $this->form_validation->set_rules('custom_bumper', 'Custom Bumper', 'required');
-        // $this->form_validation->set_rules('grill_guard', 'Grill Guard', 'required');
-        // $this->form_validation->set_rules('third_row_seat', 'Third Row Seat', 'required');
-        // $this->form_validation->set_rules('paint_body_condition', 'Paint/Body Condition', 'required');
-        // $this->form_validation->set_rules('glass_condition', 'Glass Condition', 'required');
-        // $this->form_validation->set_rules('tires_condition', 'Tires Condition', 'required');
-        // $this->form_validation->set_rules('brakes_condition', 'Brakes Condition', 'required');
-        // $this->form_validation->set_rules('transmission_condition', 'Transmission Condition', 'required');
-        // $this->form_validation->set_rules('clutch_condition', 'Clutch Condition', 'required');
-        // $this->form_validation->set_rules('carpet_condition', 'Carpet Condition', 'required');
-        // $this->form_validation->set_rules('upholstery_condition', 'Upholstery Condition', 'required');
-        // $this->form_validation->set_rules('engine_condition', 'Engine Condition', 'required');
-        // $this->form_validation->set_rules('exhaust_condition', 'Exhaust Condition', 'required');
-        // $this->form_validation->set_rules('shocks_condition', 'Shocks Condition', 'required');
-        // $this->form_validation->set_rules('air_conditioning_condition', 'Air Conditioning Condition', 'required');
-        // $this->form_validation->set_rules('vehicle_smoked_in', 'Vehicle Smoked In', 'required');
-        // $this->form_validation->set_rules('salvage', 'Salvage', 'required');
-        // $this->form_validation->set_rules('lemon_law_buyback', 'Lemon Law/Buyback', 'required');
-        // $this->form_validation->set_rules('warranty_return', 'Warranty Return', 'required');
-        // $this->form_validation->set_rules('frame_damage', 'Frame Damage', 'required');
-        // $this->form_validation->set_rules('flood_damage', 'Flood Damage', 'required');
-        // $this->form_validation->set_rules('general_overall_condition', 'General Overall Condition', 'required');
-        // $this->form_validation->set_rules('additional_condition_information', 'Additional Condition Information', 'required');
-        // if ($this->form_validation->run() == FALSE) { // FALSE FOR PRODUCTION
-        //     $data['model_years'] = $this->data_model->get_model_years();
-        //     $this->session->set_userdata('vehicle_id', $vehicle_id);
-        //     $data['vehicle_images'] = $this->data_model->get_vehicle_images($vehicle_id);
-        //     $data['vehicle_details'] = $this->data_model->get_vehicle_details($vehicle_id);
-        //     $this->load->view('sellers_account_edit_vehicle_view', $data);
-        // } else {
-        //     $year_make_model_style_selections = array(
-        //         'year'  => '',
-        //         'make'  => '',
-        //         'model' => '',
-        //         'style' => ''
-        //     );
-        //     $any_accidents_value = array(
-        //         'any_accidents' => ''
-        //     );
-        //     $this->session->unset_userdata($year_make_model_style_selections);
-        //     $this->session->unset_userdata($any_accidents_value);
-        //     $data = array(
-        //         'user_id'                       => $this->session->userdata('user_id'),
-        //         'year'                          => $this->input->post('year'),
-        //         'make'                          => $this->input->post('make'),
-        //         'model'                         => $this->input->post('model'),
-        //         'style'                         => $this->input->post('style'),
-        //         'vin'                           => $this->input->post('vin'),
-        //         'exterior_color'                => $this->input->post('exterior_color'),
-        //         'interior_color'                => $this->input->post('interior_color'),
-        //         'upholstery_type'               => $this->input->post('upholstery_type'),
-        //         'number_of_cylinders'           => $this->input->post('number_of_cylinders'),
-        //         'transmission_type'             => $this->input->post('transmission_type'),
-        //         'number_of_speeds'              => $this->input->post('number_of_speeds'),
-        //         'fuel_type'                     => $this->input->post('fuel_type'),
-        //         'drive_type'                    => $this->input->post('drive_type'),
-        //         'mileage'                       => str_replace (',', '', $this->input->post('mileage')),
-        //         'is_actual_mileage'             => $this->input->post('is_actual_mileage'),
-        //         'mileage_notes'                 => $this->input->post('mileage_notes'),
-        //         'original_owner'                => $this->input->post('original_owner'),
-        //         'any_accidents'                 => $this->input->post('any_accidents'),
-        //         'any_repainting'                => $this->input->post('any_repainting'),
-        //         'vehicle_location_street'       => $this->input->post('vehicle_location_street'),
-        //         'vehicle_location_city'         => $this->input->post('vehicle_location_city'),
-        //         'vehicle_location_state'        => $this->input->post('vehicle_location_state'),
-        //         'vehicle_location_zip'          => $this->input->post('vehicle_location_zip'),
-        //         'license_plate_number'          => $this->input->post('license_plate_number'),
-        //         'state_of_registration'         => $this->input->post('state_of_registration'),
-        //         'registration_expiration_month' => $this->input->post('registration_expiration_month'),
-        //         'registration_expiration_year'  => $this->input->post('registration_expiration_year'),
-        //         'paint_body_condition'          => $this->input->post('paint_body_condition'),
-        //         'glass_condition'               => $this->input->post('glass_condition'),
-        //         'tires_condition'               => $this->input->post('tires_condition'),
-        //         'brakes_condition'              => $this->input->post('brakes_condition'),
-        //         'transmission_condition'        => $this->input->post('transmission_condition'),
-        //         'clutch_condition'              => $this->input->post('clutch_condition'),
-        //         'carpet_condition'              => $this->input->post('carpet_condition'),
-        //         'upholstery_condition'          => $this->input->post('upholstery_condition'),
-        //         'engine_condition'              => $this->input->post('engine_condition'),
-        //         'exhaust_condition'             => $this->input->post('exhaust_condition'),
-        //         'shocks_condition'              => $this->input->post('shocks_condition'),
-        //         'air_conditioning_condition'    => $this->input->post('air_conditioning_condition'),
-        //         'vehicle_smoked_in'             => $this->input->post('vehicle_smoked_in'),
-        //         'salvage'                       => $this->input->post('salvage'),
-        //         'lemon_law_buyback'             => $this->input->post('lemon_law_buyback'),
-        //         'warranty_return'               => $this->input->post('warranty_return'),
-        //         'frame_damage'                  => $this->input->post('frame_damage'),
-        //         'flood_damage'                  => $this->input->post('flood_damage'),
-        //         'additional_condition_information'  => $this->input->post('additional_condition_information'),
-        //         'general_overall_condition'     => $this->input->post('general_overall_condition'),
-        //         'accident_repair_history'       => $this->input->post('accident_repair_history'),
-        //         'vehicle_type'                  => $this->input->post('vehicle_type'),
-        //         'power_steering'                => $this->input->post('power_steering'),
-        //         'all_wheel_drive'               => $this->input->post('all_wheel_drive'),
-        //         'air_conditioning'              => $this->input->post('air_conditioning'),
-        //         'power_windows'                 => $this->input->post('power_windows'),
-        //         'power_door_locks'              => $this->input->post('power_door_locks'),
-        //         'tilt_steering_wheel'           => $this->input->post('tilt_steering_wheel'),
-        //         'cruise_control'                => $this->input->post('cruise_control'),
-        //         'cd_player_changer'             => $this->input->post('cd_player_changer'),
-        //         'premium_sound'                 => $this->input->post('premium_sound'),
-        //         'integrated_phone'              => $this->input->post('integrated_phone'),
-        //         'dual_airbags'                  => $this->input->post('dual_airbags'),
-        //         'four_wheel_abs_brakes'         => $this->input->post('four_wheel_abs_brakes'),
-        //         'traction_control'              => $this->input->post('traction_control'),
-        //         'power_seat'                    => $this->input->post('power_seat'),
-        //         'dual_power_seats'              => $this->input->post('dual_power_seats'),
-        //         'flip_up_moon_roof'             => $this->input->post('flip_up_moon_roof'),
-        //         'privacy_glass'                 => $this->input->post('privacy_glass'),
-        //         'navigation'                    => $this->input->post('navigation'),
-        //         'alloy_wheels'                  => $this->input->post('alloy_wheels'),
-        //         'entertainment_system_dvd'      => $this->input->post('entertainment_system_dvd'),
-        //         'towing_package'                => $this->input->post('towing_package'),
-        //         'oversized_off_road_tires'      => $this->input->post('oversized_off_road_tires'),
-        //         'roof_rack'                     => $this->input->post('roof_rack'),
-        //         'running_boards'                => $this->input->post('running_boards'),
-        //         'sliding_rear_window'           => $this->input->post('sliding_rear_window'),
-        //         'bed_liner'                     => $this->input->post('bed_liner'),
-        //         'canopy_shell'                  => $this->input->post('canopy_shell'),
-        //         'custom_bumper'                 => $this->input->post('custom_bumper'),
-        //         'grill_guard'                   => $this->input->post('grill_guard'),
-        //         'quad_seating'                  => $this->input->post('quad_seating'),
-        //         'third_row_seat'                => $this->input->post('third_row_seat'),
-        //         'listing_status'                => 'active_listing',
-        //         'date_added'                    => date('Y-m-d H:i:s', time()),
-        //         'bid_status'                    => 'open',
-        //         'invoice_status'                => 'not_invoiced', 
-        //         'bid_session'                    => 0
-        //     );
-        //     $updated = $this->data_model->update_vehicle($vehicle_id, $data);
-        //     if ($updated) {
-        //         $this->session->set_flashdata('message', 'Success! Your listing has been updated.');
-        //         redirect("site/edit_vehicle/".$vehicle_id);
-        //     } else {
-        //         echo "Sorry, there was a problem with the update.";
-        //     }
-        // }
+        date_default_timezone_set('UTC');
+        if (!$this->ion_auth->logged_in()) {
+            redirect('site/login');
+        }
+        $vehicle_id = $this->input->post('vehicle_id');
+        $year_make_model_style_selections = array(
+            'year'  => $this->input->post('year'),
+            'make'  => $this->input->post('make'),
+            'model' => $this->input->post('model'),
+            'style' => $this->input->post('style')
+        );
+        $any_accidents_value = array(
+            'any_accidents' => $this->input->post('any_accidents')
+        );
+        $this->session->set_userdata($year_make_model_style_selections);
+        $this->session->set_userdata($any_accidents_value);
+        $this->load->model('data_model');
+        $this->load->library('form_validation');
+        $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+        $this->form_validation->set_rules('year', 'Year', 'required|numeric');
+        $this->form_validation->set_rules('make', 'Make', 'required');
+        $this->form_validation->set_rules('model', 'Model', 'required');
+        $this->form_validation->set_rules('style', 'Style', 'required');
+        $this->form_validation->set_rules('drive_type', 'Drive Type', 'required');
+        $this->form_validation->set_rules('vin', 'VIN', 'required|exact_length[17]|alpha_numeric');
+        $this->form_validation->set_rules('upholstery_type', 'Upholstery Type', 'required');
+        $this->form_validation->set_rules('number_of_cylinders', 'Number of Cylinders', 'required');
+        $this->form_validation->set_rules('transmission_type', 'Transmission Type', 'required');
+        $this->form_validation->set_rules('number_of_speeds', 'Number of Speeds', 'required');
+        $this->form_validation->set_rules('fuel_type', 'Fuel Type', 'required');
+        $this->form_validation->set_rules('exterior_color', 'Exterior Color', 'required');
+        $this->form_validation->set_rules('interior_color', 'Interior Color', 'required');
+        $this->form_validation->set_rules('mileage', 'Mileage', 'required');
+        $this->form_validation->set_rules('is_actual_mileage', 'Is Mileage Actual', 'required');
+        if ($this->input->post('is_actual_mileage') == 'No') {
+            $this->form_validation->set_rules('mileage_notes', 'Mileage Notes', 'required');    
+        }
+        $this->form_validation->set_rules('original_owner', 'Original Owner', 'required');
+        $this->form_validation->set_rules('any_accidents', 'Any Accidents', 'required');
+        if ($this->input->post('any_accidents') == 'Yes') {
+            $this->form_validation->set_rules('accident_repair_history', 'Accident Repair History', 'required');    
+        }
+        $this->form_validation->set_rules('any_repainting', 'Any Repainting', 'required');
+        $this->form_validation->set_rules('vehicle_location_street', 'Vehicle Street Location', 'required');
+        $this->form_validation->set_rules('vehicle_location_city', 'Vehicle Location City', 'required');
+        $this->form_validation->set_rules('vehicle_location_state', 'Vehcile Location State', 'required');
+        $this->form_validation->set_rules('vehicle_location_zip', 'Vehicle Location Zip', 'required');
+        $this->form_validation->set_rules('license_plate_number', 'License Plate Number', 'required');
+        $this->form_validation->set_rules('state_of_registration', 'State of Registration', 'required');
+        $this->form_validation->set_rules('registration_expiration_month', 'Registration Month', 'required');
+        $this->form_validation->set_rules('registration_expiration_year', 'Registration Year', 'required');
+        $this->form_validation->set_rules('power_steering', 'Power Steering', 'required');
+        $this->form_validation->set_rules('air_conditioning', 'Air Conditioning', 'required');
+        $this->form_validation->set_rules('power_windows', 'Power Windows', 'required');
+        $this->form_validation->set_rules('power_door_locks', 'Power Door Locks', 'required');
+        $this->form_validation->set_rules('cruise_control', 'Cruise Control', 'required');
+        $this->form_validation->set_rules('cd_player_changer', 'CD Player/Changer', 'required');
+        $this->form_validation->set_rules('premium_sound', 'Premium Sound', 'required');
+        $this->form_validation->set_rules('integrated_phone', 'Integrated Phone', 'required');
+        $this->form_validation->set_rules('dual_airbags', 'Dual Airbags', 'required');
+        $this->form_validation->set_rules('four_wheel_abs_brakes', 'Four Wheel ABS Brakes', 'required');
+        $this->form_validation->set_rules('traction_control', 'Traction Control', 'required');
+        $this->form_validation->set_rules('power_seat', 'Power Seat', 'required');
+        $this->form_validation->set_rules('dual_power_seats', 'Dual Power Seat', 'required');
+        $this->form_validation->set_rules('flip_up_moon_roof', 'Flip-up Moon Roof', 'required');
+        $this->form_validation->set_rules('privacy_glass', 'Privacy Glass', 'required');
+        $this->form_validation->set_rules('navigation', 'Navigation', 'required');
+        $this->form_validation->set_rules('entertainment_system_dvd', 'Entertainment System/DVD', 'required');
+        $this->form_validation->set_rules('oversized_off_road_tires', 'Oversized/Off Road Tires', 'required');
+        $this->form_validation->set_rules('roof_rack', 'Roof Rack', 'required');
+        $this->form_validation->set_rules('running_boards', 'Running Boards', 'required');
+        $this->form_validation->set_rules('sliding_rear_window', 'Sliding Rear Window', 'required');
+        $this->form_validation->set_rules('bed_liner', 'Bed Liner', 'required');
+        $this->form_validation->set_rules('canopy_shell', 'Canopy Shell', 'required');
+        $this->form_validation->set_rules('quad_seating', 'Quad Seating', 'required');
+        $this->form_validation->set_rules('tilt_steering_wheel', 'Tilt Steering Wheel', 'required');
+        $this->form_validation->set_rules('all_wheel_drive', 'All Wheel Drive', 'required');
+        $this->form_validation->set_rules('alloy_wheels', 'Alloy Wheels', 'required');
+        $this->form_validation->set_rules('towing_package', 'Towing Package', 'required');
+        $this->form_validation->set_rules('custom_bumper', 'Custom Bumper', 'required');
+        $this->form_validation->set_rules('grill_guard', 'Grill Guard', 'required');
+        $this->form_validation->set_rules('third_row_seat', 'Third Row Seat', 'required');
+        $this->form_validation->set_rules('paint_body_condition', 'Paint/Body Condition', 'required');
+        $this->form_validation->set_rules('glass_condition', 'Glass Condition', 'required');
+        $this->form_validation->set_rules('tires_condition', 'Tires Condition', 'required');
+        $this->form_validation->set_rules('brakes_condition', 'Brakes Condition', 'required');
+        $this->form_validation->set_rules('transmission_condition', 'Transmission Condition', 'required');
+        $this->form_validation->set_rules('clutch_condition', 'Clutch Condition', 'required');
+        $this->form_validation->set_rules('carpet_condition', 'Carpet Condition', 'required');
+        $this->form_validation->set_rules('upholstery_condition', 'Upholstery Condition', 'required');
+        $this->form_validation->set_rules('engine_condition', 'Engine Condition', 'required');
+        $this->form_validation->set_rules('exhaust_condition', 'Exhaust Condition', 'required');
+        $this->form_validation->set_rules('shocks_condition', 'Shocks Condition', 'required');
+        $this->form_validation->set_rules('air_conditioning_condition', 'Air Conditioning Condition', 'required');
+        $this->form_validation->set_rules('vehicle_smoked_in', 'Vehicle Smoked In', 'required');
+        $this->form_validation->set_rules('salvage', 'Salvage', 'required');
+        $this->form_validation->set_rules('lemon_law_buyback', 'Lemon Law/Buyback', 'required');
+        $this->form_validation->set_rules('warranty_return', 'Warranty Return', 'required');
+        $this->form_validation->set_rules('frame_damage', 'Frame Damage', 'required');
+        $this->form_validation->set_rules('flood_damage', 'Flood Damage', 'required');
+        $this->form_validation->set_rules('general_overall_condition', 'General Overall Condition', 'required');
+        $this->form_validation->set_rules('additional_condition_information', 'Additional Condition Information', 'required');
+        if ($this->form_validation->run() == FALSE) { // FALSE FOR PRODUCTION
+            $data['model_years'] = $this->data_model->get_model_years();
+            $this->session->set_userdata('vehicle_id', $vehicle_id);
+            $data['vehicle_images'] = $this->data_model->get_vehicle_images($vehicle_id);
+            $data['vehicle_details'] = $this->data_model->get_vehicle_details($vehicle_id);
+            $this->load->view('sellers_account_edit_vehicle_view', $data);
+        } else {
+            $year_make_model_style_selections = array(
+                'year'  => '',
+                'make'  => '',
+                'model' => '',
+                'style' => ''
+            );
+            $any_accidents_value = array(
+                'any_accidents' => ''
+            );
+            $this->session->unset_userdata($year_make_model_style_selections);
+            $this->session->unset_userdata($any_accidents_value);
+            $data = array(
+                'user_id'                       => $this->session->userdata('user_id'),
+                'year'                          => $this->input->post('year'),
+                'make'                          => $this->input->post('make'),
+                'model'                         => $this->input->post('model'),
+                'style'                         => $this->input->post('style'),
+                'vin'                           => $this->input->post('vin'),
+                'exterior_color'                => $this->input->post('exterior_color'),
+                'interior_color'                => $this->input->post('interior_color'),
+                'upholstery_type'               => $this->input->post('upholstery_type'),
+                'number_of_cylinders'           => $this->input->post('number_of_cylinders'),
+                'transmission_type'             => $this->input->post('transmission_type'),
+                'number_of_speeds'              => $this->input->post('number_of_speeds'),
+                'fuel_type'                     => $this->input->post('fuel_type'),
+                'drive_type'                    => $this->input->post('drive_type'),
+                'mileage'                       => str_replace (',', '', $this->input->post('mileage')),
+                'is_actual_mileage'             => $this->input->post('is_actual_mileage'),
+                'mileage_notes'                 => $this->input->post('mileage_notes'),
+                'original_owner'                => $this->input->post('original_owner'),
+                'any_accidents'                 => $this->input->post('any_accidents'),
+                'any_repainting'                => $this->input->post('any_repainting'),
+                'vehicle_location_street'       => $this->input->post('vehicle_location_street'),
+                'vehicle_location_city'         => $this->input->post('vehicle_location_city'),
+                'vehicle_location_state'        => $this->input->post('vehicle_location_state'),
+                'vehicle_location_zip'          => $this->input->post('vehicle_location_zip'),
+                'license_plate_number'          => $this->input->post('license_plate_number'),
+                'state_of_registration'         => $this->input->post('state_of_registration'),
+                'registration_expiration_month' => $this->input->post('registration_expiration_month'),
+                'registration_expiration_year'  => $this->input->post('registration_expiration_year'),
+                'paint_body_condition'          => $this->input->post('paint_body_condition'),
+                'glass_condition'               => $this->input->post('glass_condition'),
+                'tires_condition'               => $this->input->post('tires_condition'),
+                'brakes_condition'              => $this->input->post('brakes_condition'),
+                'transmission_condition'        => $this->input->post('transmission_condition'),
+                'clutch_condition'              => $this->input->post('clutch_condition'),
+                'carpet_condition'              => $this->input->post('carpet_condition'),
+                'upholstery_condition'          => $this->input->post('upholstery_condition'),
+                'engine_condition'              => $this->input->post('engine_condition'),
+                'exhaust_condition'             => $this->input->post('exhaust_condition'),
+                'shocks_condition'              => $this->input->post('shocks_condition'),
+                'air_conditioning_condition'    => $this->input->post('air_conditioning_condition'),
+                'vehicle_smoked_in'             => $this->input->post('vehicle_smoked_in'),
+                'salvage'                       => $this->input->post('salvage'),
+                'lemon_law_buyback'             => $this->input->post('lemon_law_buyback'),
+                'warranty_return'               => $this->input->post('warranty_return'),
+                'frame_damage'                  => $this->input->post('frame_damage'),
+                'flood_damage'                  => $this->input->post('flood_damage'),
+                'additional_condition_information'  => $this->input->post('additional_condition_information'),
+                'general_overall_condition'     => $this->input->post('general_overall_condition'),
+                'accident_repair_history'       => $this->input->post('accident_repair_history'),
+                'vehicle_type'                  => $this->input->post('vehicle_type'),
+                'power_steering'                => $this->input->post('power_steering'),
+                'all_wheel_drive'               => $this->input->post('all_wheel_drive'),
+                'air_conditioning'              => $this->input->post('air_conditioning'),
+                'power_windows'                 => $this->input->post('power_windows'),
+                'power_door_locks'              => $this->input->post('power_door_locks'),
+                'tilt_steering_wheel'           => $this->input->post('tilt_steering_wheel'),
+                'cruise_control'                => $this->input->post('cruise_control'),
+                'cd_player_changer'             => $this->input->post('cd_player_changer'),
+                'premium_sound'                 => $this->input->post('premium_sound'),
+                'integrated_phone'              => $this->input->post('integrated_phone'),
+                'dual_airbags'                  => $this->input->post('dual_airbags'),
+                'four_wheel_abs_brakes'         => $this->input->post('four_wheel_abs_brakes'),
+                'traction_control'              => $this->input->post('traction_control'),
+                'power_seat'                    => $this->input->post('power_seat'),
+                'dual_power_seats'              => $this->input->post('dual_power_seats'),
+                'flip_up_moon_roof'             => $this->input->post('flip_up_moon_roof'),
+                'privacy_glass'                 => $this->input->post('privacy_glass'),
+                'navigation'                    => $this->input->post('navigation'),
+                'alloy_wheels'                  => $this->input->post('alloy_wheels'),
+                'entertainment_system_dvd'      => $this->input->post('entertainment_system_dvd'),
+                'towing_package'                => $this->input->post('towing_package'),
+                'oversized_off_road_tires'      => $this->input->post('oversized_off_road_tires'),
+                'roof_rack'                     => $this->input->post('roof_rack'),
+                'running_boards'                => $this->input->post('running_boards'),
+                'sliding_rear_window'           => $this->input->post('sliding_rear_window'),
+                'bed_liner'                     => $this->input->post('bed_liner'),
+                'canopy_shell'                  => $this->input->post('canopy_shell'),
+                'custom_bumper'                 => $this->input->post('custom_bumper'),
+                'grill_guard'                   => $this->input->post('grill_guard'),
+                'quad_seating'                  => $this->input->post('quad_seating'),
+                'third_row_seat'                => $this->input->post('third_row_seat'),
+                'listing_status'                => 'active_listing',
+                'date_added'                    => date('Y-m-d H:i:s', time()),
+                'bid_status'                    => 'open',
+                'invoice_status'                => 'not_invoiced', 
+                'bid_session'                    => 0
+            );
+            $updated = $this->data_model->update_vehicle($vehicle_id, $data);
+            if ($updated) {
+                $this->session->set_flashdata('message', 'Success! Your listing has been updated.');
+                redirect("site/edit_vehicle/".$vehicle_id);
+            } else {
+                echo "Sorry, there was a problem with the update.";
+            }
+        }
     }
     
     function edit_vehicle($vehicle_id) {
