@@ -235,14 +235,14 @@ class Site extends CI_Controller {
 
             $updated = $this->data_model->update_vehicle($vehicle_id, $data);
 
-            echo "Update Vehicle Test 4";
+            if ($updated) {
+                $this->session->set_flashdata('message', 'Success! Your listing has been updated.');
+                echo "Update Vehicle Test 5";
+                //redirect("site/edit_vehicle/".$vehicle_id);
 
-        //     if ($updated) {
-        //         $this->session->set_flashdata('message', 'Success! Your listing has been updated.');
-        //         redirect("site/edit_vehicle/".$vehicle_id);
-        //     } else {
-        //         echo "Sorry, there was a problem with the update.";
-        //     }
+            } else {
+                echo "Sorry, there was a problem with the update.";
+            }
         }
     }
     
