@@ -250,8 +250,8 @@ class Site extends CI_Controller {
     
     function edit_vehicle($vehicle_id) {
 
-        echo "Edit Vehicle Function<br />";
-        echo "Logged IN: ".$this->ion_auth->logged_in();
+        //echo "Edit Vehicle Function<br />";
+        //echo "Logged IN: ".$this->ion_auth->logged_in();
 
         if (!$this->ion_auth->logged_in()) {
             redirect('site/login');
