@@ -236,7 +236,7 @@ class Site extends CI_Controller {
             $result = $this->data_model->update_vehicle($vehicle_id, $data);
 
             if ($result) {
-                //$this->session->set_flashdata('test', 'value');
+                $this->session->set_flashdata('message', 'Success! Your listing has been updated.');
                 // TODO - Setting flashdata causes 502 Bad Gateway. This might help: http://developernote.com/2012/09/how-i-fixed-nginx-502-bad-gateway-error/
                 redirect("site/edit_vehicle/".$vehicle_id);
             } else {
