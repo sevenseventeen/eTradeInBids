@@ -274,6 +274,18 @@ class Site extends CI_Controller {
         $this->load->view('frequently_asked_questions_view');
     }
     
+    function get_started() {
+        if (!$this->ion_auth->logged_in()) {
+            redirect('site/login');
+        } else {
+            if ($this->session->userdata('account_type') == 'buyer') {
+                redirect('site/buyers_account_active_vehicles');
+            } else {
+                redirect('site/sellers_account_list_vehicle');
+            }
+        }
+    }
+    
     function charge_customer(){
         $config['stripe_key_test_public']         = 'pk_m9mjcmI1XxXkcqIk83awd3EPKeCRh';
         $config['stripe_key_test_secret']         = '3InMbRrGf9vK1HD6P8PW13RWsExh9niE';

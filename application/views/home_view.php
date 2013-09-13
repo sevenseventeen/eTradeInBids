@@ -10,7 +10,7 @@
 		?>
 		
 		<div class="module_960 drop_shadow rounded_corners light_gradient width_480">
-			<a href="<?php echo base_url(); ?>site/login"><img src="<?php echo base_url().'_images/home_page_main_image.jpg'; ?>" /></a>
+			<a href="<?php echo base_url(); ?>site/get_started"><img src="<?php echo base_url().'_images/home_page_main_image.jpg'; ?>" /></a>
 			<div id="steps">
 				<div class="step first">
 					<img src="<?php echo base_url().'_images/step1.jpg'; ?>">
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<br class="clear_float" />
-			<a href="<?php echo base_url(); ?>site/register_seller"><img id="get_started_button" src="<?php echo base_url().'_images/get_started_creative_intellects.png'; ?>"></a>
+			<a href="<?php echo base_url(); ?>site/get_started"><img id="get_started_button" src="<?php echo base_url().'_images/get_started_creative_intellects.png'; ?>"></a>
 			<!-- <h1>Why you should use eTradeInBids</h1>
 			<div class="right_image">
 				<img alt="bidding_on_vehicles" src="<?php echo base_url().'_images/bid_for_vehicle.jpg'; ?>" />
