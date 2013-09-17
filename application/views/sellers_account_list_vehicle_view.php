@@ -1,5 +1,7 @@
 <?php  include '_includes/head.php' ?>
 
+	<?php $file_name = basename(__FILE__, '.php'); ?>
+
 	<div id="main_container" class="sellers_account">
 
 		<?php
@@ -16,12 +18,6 @@
 						$("#terms_of_use_checkbox").removeAttr('disabled');
 						$("#i_agree_instructions").hide();
 						$("#i_agree_text").fadeIn();
-					}
-				});
-				$("#submit_button").click(function() {
-					if(	$('[name="userfile"]').val() == ""	) {
-						alert ("Sorry, all fields are required. You must choose an image for your vehicle before proceeding.");
-						return false;
 					}
 				});
 			});
@@ -631,19 +627,19 @@
 				
 				<label>Exterior Color</label>				
 
-				<?php echo form_dropdown('exterior_color', $exterior_color_options, set_value('exterior_color', '')); ?>																
+				<?php echo form_dropdown('exterior_color', $exterior_color_options, set_value('exterior_color', ''), 'id="exterior_color"'); ?>																
 				<?php echo form_error('exterior_color'); ?>
 				<br class="clear_float" />
 				
 				<label>Interior Color</label>				
 
-				<?php echo form_dropdown('interior_color', $interior_color_options, set_value('interior_color', '')); ?>
+				<?php echo form_dropdown('interior_color', $interior_color_options, set_value('interior_color', ''), 'id="interior_color"'); ?>
 				<?php echo form_error('interior_color'); ?>
 				<br class="clear_float" />
 				
 				<label>Mileage</label>						
 				
-				<?php echo form_input('mileage', set_value('mileage')); ?>
+				<?php echo form_input('mileage', set_value('mileage'), 'id="mileage"'); ?>
 				<?php echo form_error('mileage'); ?>
 				<br class="clear_float" />
 
@@ -663,7 +659,7 @@
 				<!-- TODO (Why does that say drive_type under original owner section) -->
 
 				<label>Orginal Owner</label>				
-				<?php echo form_dropdown('original_owner', $original_owner_options, set_value('original_owner', ''), 'id="drive_type"'); ?>																
+				<?php echo form_dropdown('original_owner', $original_owner_options, set_value('original_owner', ''), 'id="original_owner"'); ?>																
 				<?php echo form_error('original_owner'); ?>
 
 				<br class="clear_float" />
@@ -683,20 +679,52 @@
 				</div>
 				
 				<label>Any Repainting</label>				
-				<?php echo form_dropdown('any_repainting', $any_repainting_options, set_value('any_repainting', ''), 'id="drive_type"'); ?>																
+				<?php echo form_dropdown('any_repainting', $any_repainting_options, set_value('any_repainting', ''), 'id="any_repainting"'); ?>																
 				<?php echo form_error('any_repainting'); ?>
-
 				<br class="clear_float" />
 
-				<!-- <label>Loan Balance</label>  -->		<?php //echo form_input('loan_balance', set_value('loan_balance')); ?>																			<?php //echo form_error('loan_balance'); ?><!-- <br class="clear_float" /> -->
-				<label>Vehicle Location - Street</label>	<?php echo form_input('vehicle_location_street', set_value('vehicle_location_street')); ?>	<?php echo form_error('vehicle_location_street'); ?><br class="clear_float" />
-				<label>Vehicle Location - City</label>		<?php echo form_input('vehicle_location_city', set_value('vehicle_location_city')); ?>					<?php echo form_error('vehicle_location_city'); ?><br class="clear_float" />
-				<label>Vehicle Location - State</label>		<?php echo form_dropdown('vehicle_location_state', $state_options, set_value('vehicle_location_state', ''), 'id="drive_type"'); ?>																					<?php echo form_error('vehicle_location_state'); ?><br class="clear_float" />
-				<label>Vehicle Location - Zip</label>		<?php echo form_input('vehicle_location_zip', set_value('vehicle_location_zip')); ?>							<?php echo form_error('vehicle_location_zip'); ?><br class="clear_float" />
-				<label>License Plate Number</label>			<?php echo form_input('license_plate_number', set_value('license_plate_number')); ?>			<?php echo form_error('license_plate_number'); ?><br class="clear_float" />
-				<label>State of Registration</label>		<?php echo form_dropdown('state_of_registration', $state_options, set_value('state_of_registration', ''), 'id="drive_type"'); ?>																		<?php echo form_error('state_of_registration'); ?><br class="clear_float" />
-				<label>Registration Expiration Date</label>	<?php echo form_dropdown('registration_expiration_month', $registration_expiration_month_options, set_value('registration_expiration_month'), 'class="registration_expiration"'); echo form_dropdown('registration_expiration_year', $registration_expiration_year_options,  set_value('registration_expiration_year'), 'class="registration_expiration"'); ?> <?php echo form_error('registration_expiration_month'); ?> <?php echo form_error('registration_expiration_year'); ?><br class="clear_float" />
-				<label>Main Image <strong>4MB Maximum</strong></label>					<?php echo form_upload('userfile'); ?><br class="clear_float" />
+				<label>Vehicle Location - Street</label>	
+				<?php echo form_input('vehicle_location_street', set_value('vehicle_location_street'), 'id="vehicle_location_street"'); ?>	
+				<?php echo form_error('vehicle_location_street'); ?>
+				<br class="clear_float" />
+				
+				<label>Vehicle Location - City</label>		
+				<?php echo form_input('vehicle_location_city', set_value('vehicle_location_city'), 'id="vehicle_location_city"'); ?>					
+				<?php echo form_error('vehicle_location_city'); ?>
+				<br class="clear_float" />
+				
+				<label>Vehicle Location - State</label>		
+				<?php echo form_dropdown('vehicle_location_state', $state_options, set_value('vehicle_location_state', ''), 'id="vehicle_location_state"'); ?>																					
+				<?php echo form_error('vehicle_location_state'); ?>
+				<br class="clear_float" />
+				
+				<label>Vehicle Location - Zip</label>		
+				<?php echo form_input('vehicle_location_zip', set_value('vehicle_location_zip'), 'id="vehicle_location_zip"'); ?>							
+				<?php echo form_error('vehicle_location_zip'); ?>'
+				<br class="clear_float" />
+				
+				<label>License Plate Number</label>			
+				<?php echo form_input('license_plate_number', set_value('license_plate_number'), 'id="license_plate_number"'); ?>			
+				<?php echo form_error('license_plate_number'); ?>
+				<br class="clear_float" />
+				
+				<label>State of Registration</label>		
+				<?php echo form_dropdown('state_of_registration', $state_options, set_value('state_of_registration', ''), 'id="state_of_registration"'); ?>
+				<?php echo form_error('state_of_registration'); ?>
+				<br class="clear_float" />
+				
+				<label>Registration Expiration Date</label>	
+				<?php 
+					echo form_dropdown('registration_expiration_month', $registration_expiration_month_options, set_value('registration_expiration_month'), 'class="registration_expiration" id="registration_expiration_month"'); 
+					echo form_dropdown('registration_expiration_year', $registration_expiration_year_options,  set_value('registration_expiration_year'), 'class="registration_expiration" id="registration_expiration_year"'); 
+					echo form_error('registration_expiration_month');
+					echo form_error('registration_expiration_year'); 
+				?>
+				<br class="clear_float" />
+				
+				<label>Main Image <strong>4MB Maximum</strong></label>					
+				<?php echo form_upload('userfile'); ?>
+				<br class="clear_float" />
 				
 			</fieldset>
 			
@@ -800,7 +828,7 @@
 																<?php echo form_error('shocks_condition'); ?>
 																<br class="clear_float">
 				
-				<label>Air conditioning (blows cold?)</label>	<label class="radio_label" for="air_conditioning_good">Good</label>		<input id="air_conditioning_good" class="radio_button" type="radio" value="Good" name="air_conditioning_condition" <?php echo set_radio('air_conditioning_condition', 'Good'); ?>>
+				<label>Air Conditioning (blows cold?)</label>	<label class="radio_label" for="air_conditioning_good">Good</label>		<input id="air_conditioning_good" class="radio_button" type="radio" value="Good" name="air_conditioning_condition" <?php echo set_radio('air_conditioning_condition', 'Good'); ?>>
 																<label class="radio_label" for="air_conditioning_fair">Fair</label>		<input id="air_conditioning_fair" class="radio_button" type="radio" value="Fair" name="air_conditioning_condition" <?php echo set_radio('air_conditioning_condition', 'Fair'); ?>>
 																<label class="radio_label" for="air_conditioning_poor">Poor</label>		<input id="air_conditioning_poor" class="radio_button" type="radio" value="Poor" name="air_conditioning_condition" <?php echo set_radio('air_conditioning_condition', 'Poor'); ?>>
 																<?php echo form_error('air_conditioning_condition'); ?>

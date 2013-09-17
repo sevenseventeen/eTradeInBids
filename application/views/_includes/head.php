@@ -18,6 +18,7 @@
     <script type="text/javascript" src="<?php echo base_url().'_javascript/swfobject.js'; ?>"></script>
     <script type="text/javascript" src="<?php echo base_url().'_javascript/jquery.uploadify.v2.1.4.js'; ?>"></script>
     <script type="text/javascript" src="<?php echo base_url().'_javascript/jquery.formatCurrency-1.4.0.js'; ?>"></script>
+
     <script type="text/javascript">
 
     $(document).ready(function() {

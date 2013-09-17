@@ -23,7 +23,7 @@
 											<?php echo form_error('cruise_control'); ?>
 											<br class="clear_float">
 																
-<label>CD player/ Changer</label>			<label class="radio_label" for="cd_player_changer_yes">Yes</label>	<input id="cd_player_changer_yes" class="radio_button" type="radio" value="Yes" name="cd_player_changer" <?php echo set_radio('cd_player_changer', 'Yes'); ?>>
+<label>CD Player/Changer</label>			<label class="radio_label" for="cd_player_changer_yes">Yes</label>	<input id="cd_player_changer_yes" class="radio_button" type="radio" value="Yes" name="cd_player_changer" <?php echo set_radio('cd_player_changer', 'Yes'); ?>>
 											<label class="radio_label" for="cd_player_changer_no">No</label>	<input id="cd_player_changer_no"  class="radio_button" type="radio" value="No" name="cd_player_changer" <?php echo set_radio('cd_player_changer', 'No'); ?>>
 											<?php echo form_error('cd_player_changer'); ?>
 											<br class="clear_float">
@@ -33,7 +33,7 @@
 											<?php echo form_error('premium_sound'); ?>
 											<br class="clear_float">
 																
-<label>Integrated phone</label>				<label class="radio_label" for="integrated_phone_yes">Yes</label>	<input id="integrated_phone_yes" class="radio_button" type="radio" value="Yes" name="integrated_phone" <?php echo set_radio('integrated_phone', 'Yes'); ?>>
+<label>Integrated Phone</label>				<label class="radio_label" for="integrated_phone_yes">Yes</label>	<input id="integrated_phone_yes" class="radio_button" type="radio" value="Yes" name="integrated_phone" <?php echo set_radio('integrated_phone', 'Yes'); ?>>
 											<label class="radio_label" for="integrated_phone_no">No</label>		<input id="integrated_phone_no"  class="radio_button" type="radio" value="No" name="integrated_phone" <?php echo set_radio('integrated_phone', 'No'); ?>>
 											<?php echo form_error('integrated_phone'); ?>
 											<br class="clear_float">
@@ -58,17 +58,17 @@
 											<?php echo form_error('power_seat'); ?>
 											<br class="clear_float">
 																
-<label>Dual power seats</label>				<label class="radio_label" for="dual_power_seats_yes">Yes</label>	<input id="dual_power_seats_yes" class="radio_button" type="radio" value="Yes" name="dual_power_seats" <?php echo set_radio('dual_power_seats', 'Yes'); ?>>
+<label>Dual Power Seats</label>				<label class="radio_label" for="dual_power_seats_yes">Yes</label>	<input id="dual_power_seats_yes" class="radio_button" type="radio" value="Yes" name="dual_power_seats" <?php echo set_radio('dual_power_seats', 'Yes'); ?>>
 											<label class="radio_label" for="dual_power_seats_no">No</label>		<input id="dual_power_seats_no"  class="radio_button" type="radio" value="No" name="dual_power_seats" <?php echo set_radio('dual_power_seats', 'No'); ?>>
 											<?php echo form_error('dual_power_seats'); ?>
 											<br class="clear_float">
 																
-<label>Flip up moon roof</label>			<label class="radio_label" for="flip_up_moon_roof_yes">Yes</label>	<input id="flip_up_moon_roof_yes" class="radio_button" type="radio" value="Yes" name="flip_up_moon_roof" <?php echo set_radio('flip_up_moon_roof', 'Yes'); ?>>
+<label>Flip-up Moon Roof</label>			<label class="radio_label" for="flip_up_moon_roof_yes">Yes</label>	<input id="flip_up_moon_roof_yes" class="radio_button" type="radio" value="Yes" name="flip_up_moon_roof" <?php echo set_radio('flip_up_moon_roof', 'Yes'); ?>>
 											<label class="radio_label" for="flip_up_moon_roof_no">No</label>	<input id="flip_up_moon_roof_no"  class="radio_button" type="radio" value="No" name="flip_up_moon_roof" <?php echo set_radio('flip_up_moon_roof', 'No'); ?>>
 											<?php echo form_error('flip_up_moon_roof'); ?>
 											<br class="clear_float">
 																
-<label>Privacy glass</label>				<label class="radio_label" for="privacy_glass_yes">Yes</label>		<input id="privacy_glass_yes" class="radio_button" type="radio" value="Yes" name="privacy_glass" <?php echo set_radio('privacy_glass', 'Yes'); ?>>
+<label>Privacy Glass</label>				<label class="radio_label" for="privacy_glass_yes">Yes</label>		<input id="privacy_glass_yes" class="radio_button" type="radio" value="Yes" name="privacy_glass" <?php echo set_radio('privacy_glass', 'Yes'); ?>>
 											<label class="radio_label" for="privacy_glass_no">No</label>		<input id="privacy_glass_no"  class="radio_button" type="radio" value="No" name="privacy_glass" <?php echo set_radio('privacy_glass', 'No'); ?>>
 											<?php echo form_error('privacy_glass'); ?>
 											<br class="clear_float">
@@ -78,7 +78,7 @@
 											<?php echo form_error('navigation'); ?>
 											<br class="clear_float">
 																
-<label>Entertainment system/ DVD</label>	<label class="radio_label" for="entertainment_system_dvd_yes">Yes</label>	<input id="entertainment_system_dvd_yes" class="radio_button" type="radio" value="Yes" name="entertainment_system_dvd" <?php echo set_radio('entertainment_system_dvd', 'Yes'); ?>>
+<label>Entertainment System/DVD</label>	<label class="radio_label" for="entertainment_system_dvd_yes">Yes</label>	<input id="entertainment_system_dvd_yes" class="radio_button" type="radio" value="Yes" name="entertainment_system_dvd" <?php echo set_radio('entertainment_system_dvd', 'Yes'); ?>>
 											<label class="radio_label" for="entertainment_system_dvd_no">No</label>			<input id="entertainment_system_dvd_no"  class="radio_button" type="radio" value="No" name="entertainment_system_dvd" <?php echo set_radio('entertainment_system_dvd', 'No'); ?>>
 											<?php echo form_error('entertainment_system_dvd'); ?>
 											<br class="clear_float">
@@ -128,12 +128,12 @@
 											<?php echo form_error('all_wheel_drive'); ?>
 											<br class="clear_float">
 											
-<label>Alloy wheels</label>					<label class="radio_label" for="alloy_wheels_yes">Yes</label>		<input id="alloy_wheels_yes" class="radio_button" type="radio" value="Yes" name="alloy_wheels" <?php echo set_radio('alloy_wheels', 'Yes'); ?>>
+<label>Alloy Wheels</label>					<label class="radio_label" for="alloy_wheels_yes">Yes</label>		<input id="alloy_wheels_yes" class="radio_button" type="radio" value="Yes" name="alloy_wheels" <?php echo set_radio('alloy_wheels', 'Yes'); ?>>
 											<label class="radio_label" for="alloy_wheels_no">No</label>			<input id="alloy_wheels_no"  class="radio_button" type="radio" value="No" name="alloy_wheels" <?php echo set_radio('alloy_wheels', 'No'); ?>>
 											<?php echo form_error('alloy_wheels'); ?>
 											<br class="clear_float">
 											
-<label>Towing package</label>				<label class="radio_label" for="towing_package_yes">Yes</label>		<input id="towing_package_yes" class="radio_button" type="radio" value="Yes" name="towing_package" <?php echo set_radio('towing_package', 'Yes'); ?>>
+<label>Towing Package</label>				<label class="radio_label" for="towing_package_yes">Yes</label>		<input id="towing_package_yes" class="radio_button" type="radio" value="Yes" name="towing_package" <?php echo set_radio('towing_package', 'Yes'); ?>>
 											<label class="radio_label" for="towing_package_no">No</label>		<input id="towing_package_no"  class="radio_button" type="radio" value="No" name="towing_package" <?php echo set_radio('towing_package', 'No'); ?>>
 											<?php echo form_error('towing_package'); ?>
 											<br class="clear_float">

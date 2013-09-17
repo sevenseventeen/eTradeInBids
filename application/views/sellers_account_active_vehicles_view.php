@@ -37,8 +37,6 @@
 				<p>You have not currently have any active vehicles. <a href='sellers_account_list_vehicle'>List a vehicle</a> Or <a href='sellers_account_inactive_vehicles'>View Inactive Vehicles</a></p>
 				</div>
 			<?php }
-			
-			//print_r($results);
 			$i = 0;
 			foreach ($results as $row) {
 			        $vehicle_row = $row; // So we can use $vehicle_row as $row in the datetime stuff below. Otherwsie the $row for the other loops overwrites it.  
@@ -52,8 +50,14 @@
 				
 					<div class="column_1">
 				
-						<img src=<?php echo $row->main_image_path; ?> />
-						
+						<?php 
+							$this->load->model('data_model');
+							$main_image_path = $this->data_model->get_main_image_path($row->vehicle_id);
+							for ($i=0; $i<count($main_image_path); $i++) {
+								echo "<img src=".$main_image_path[$i]->image_name." />";
+							}
+						?>
+
 						<br class="clear_float" />
 						
 						<?php echo get_image_paths($results, $row->vehicle_id); ?>

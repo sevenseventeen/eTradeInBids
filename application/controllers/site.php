@@ -520,6 +520,17 @@ class Site extends CI_Controller {
 		$this->load->view('sellers_account_active_vehicles_view', $data);
 	}
 
+    function make_image_primary($vehicle_id, $image_id) {
+        if (!$this->ion_auth->logged_in()) {
+            redirect('site/login');
+        }
+        $this->load->model('data_model');
+        $result = $this->data_model->make_image_primary($vehicle_id, $image_id);
+        if ($result) {
+            redirect('site/edit_vehicle/'.$vehicle_id.'#remove_image_grid');
+        }
+    }
+
 	function sellers_account_inactive_vehicles() {
 		if (!$this->ion_auth->logged_in()) {
 			redirect('site/login');

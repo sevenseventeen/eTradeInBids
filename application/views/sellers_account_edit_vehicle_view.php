@@ -1,4 +1,5 @@
-<?php  include '_includes/head.php' ?>
+ <?php  include '_includes/head.php' ?>
+ <?php $file_name = basename(__FILE__, '.php'); ?>
 
 	<div id="main_container" class="sellers_account edit_vehicle_page">
 
@@ -924,7 +925,7 @@
             <div id="uploadify_form">
                 <div id="no_flash">Please <a href="http://get.adobe.com/flashplayer/" target="_blank">update your Flash Player</a> to upload multiple photos.</div>
                 <input id="file_upload" name="file_upload" type="file" />
-                <p id="im_done">Success! Your images have been added. Refresh this page to see them in the Current Images section below.</>
+                <p id="im_done">Success! Your images have been added. Refresh this page to see them in the Current Images section below.</p>
             </div>
             <br class="clear_float" />
 		</div>
@@ -932,10 +933,33 @@
 		<div class="module_960 drop_shadow rounded_corners" id="add_a_vehicle">
             <legend>Current Images (Click to Delete)</legend>
 		    <div id="remove_image_grid">
-                <?php 
-                    foreach ($vehicle_images as $vehicle_image) {
-                        echo '<a href="'.base_url().'site/delete_image/'.$vehicle_image->vehicle_id.'/'.$vehicle_image->image_id.'" ><img src="'.$vehicle_image->image_name.'" /></a>';
-                    }
+                <?php
+                	$loop = 0;
+                	for ($i=0; $i<count($vehicle_images); $i++) {
+                		$loop++;
+                		echo '<div class="image_grid_item">';
+						echo '<img src="'.$vehicle_images[$i]->image_name.'" /><br />';
+						echo '<div class="image_tools">';
+						if($vehicle_images[$i]->is_main_image == 1) {
+							$primary_image_check = "class='delete_primary_photo_alert'";
+						} else {
+							$primary_image_check = '';
+						}
+						echo '<a '.$primary_image_check.' href="'.base_url().'site/delete_image/'.$vehicle_images[$i]->vehicle_id.'/'.$vehicle_images[$i]->image_id.'" >Delete</a>';
+						
+						if($vehicle_images[$i]->is_main_image == 1) {
+							echo '<p class="current_primary_image">Primary Image</p>';	
+						} else {
+							echo '<a class="make_image_primary_link" href="'.base_url().'site/make_image_primary/'.$vehicle_images[$i]->vehicle_id.'/'.$vehicle_images[$i]->image_id.'" >Make Image Primary</a><br />';
+						}
+						echo '</div>';
+						echo '</div>';
+						if($loop == 3) {
+							echo "<div class='clear_float'></div>";
+							$loop = 0;
+						}
+                	}
+					echo "<div class='clear_float'></div>";
                 ?>
             </div>
 

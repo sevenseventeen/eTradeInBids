@@ -38,10 +38,15 @@
 				<div class="module_960 drop_shadow rounded_corners vehicle_listing vehicle_listings">
 					<div class="column_1">
 				
-						<img src=<?php echo $row->main_image_path; ?> />
+						<?php 
+							$this->load->model('data_model');
+							$main_image_path = $this->data_model->get_main_image_path($row->vehicle_id);
+							for ($i=0; $i<count($main_image_path); $i++) {
+								echo "<img src=".$main_image_path[$i]->image_name." />";
+							}
+						?>
 						
 						<br class="clear_float" />
-						
 						
 						<?php echo get_image_paths($results, $row->vehicle_id); ?>
 						

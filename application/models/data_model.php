@@ -414,6 +414,25 @@ class Data_model extends CI_Model {
 		$query = $this->db->get_where('vehicle_images', array('vehicle_id' => $vehicle_id));
 		return $query->result();
 	}
+
+	function get_main_image_path($vehicle_id) {
+		$this->db->select('*');
+		$this->db->from('vehicle_images');
+		$this->db->where('vehicle_id', $vehicle_id);
+		$this->db->where('is_main_image', '1');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	function make_image_primary($vehicle_id, $image_id){
+		$this->db->where('vehicle_id', $vehicle_id);
+		$update = $this->db->update('vehicle_images', array('is_main_image' => '0'));
+		if ($update) {
+			$this->db->where('image_id', $image_id);
+			$result = $this->db->update('vehicle_images', array('is_main_image' => '1'));
+			return $result;
+		}
+	}
 	
 	function get_all_active_listings_by_user($user_id) {
 		//$query = $this->db->get_where('vehicles', array('user_id' => $user_id));
