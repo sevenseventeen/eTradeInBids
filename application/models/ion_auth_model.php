@@ -712,7 +712,9 @@ class Ion_auth_model extends CI_Model
 						'business_state'					=> $additional_data['business_state'],
 						'business_zip_code'					=> $additional_data['business_zip_code'],
 						//'fax_number'						=> $additional_data['fax_number'],
-						'telephone_number'					=> $additional_data['telephone_number']
+						'telephone_number'					=> $additional_data['telephone_number'],
+						'your_credit_union'					=> $additional_data['your_credit_union'],
+						'referred_by'						=> $additional_data['referred_by']
 						 );
 
 	    $this->db->insert($this->tables['sellers_accounts'], $data);

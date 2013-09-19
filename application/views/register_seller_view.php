@@ -82,9 +82,24 @@
 					<!-- <label>Fax Number</label> 				<?php //echo form_input('fax_number', set_value('fax_number')); ?>																							
 					<?php //echo form_error('fax_number'); ?><br class="clear_float" />-->
 					
-					<label>Telephone Number</label>			
-						<?php echo form_input('telephone_number', set_value('telephone_number')); ?>														
-						<?php echo form_error('telephone_number'); ?><br class="clear_float" />
+					<label>Telephone Number</label>
+						<?php echo form_input('telephone_number', set_value('telephone_number')); ?>
+						<?php echo form_error('telephone_number'); ?>
+						<br class="clear_float" />
+
+					<?php if ($this->config->item('brand') == "cutradeinbids") { ?>
+
+						<label>Your Credit Union</label>
+							<?php echo form_input('your_credit_union', set_value('your_credit_union')); ?>
+							<?php echo form_error('your_credit_union'); ?>
+							<br class="clear_float" />
+
+						<label>Referred By</label>
+							<?php echo form_input('referred_by', set_value('referred_by')); ?>
+							<?php echo form_error('referred_by'); ?>
+							<br class="clear_float" />
+
+					<?php } ?>
 					
 					<label>Password</label>					
 					<?php echo form_password('password', set_value('password')); ?>																								

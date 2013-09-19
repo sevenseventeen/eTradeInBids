@@ -918,11 +918,25 @@ function update_credit_card_info() {
 		$this->form_validation->set_rules('business_zip_code', 'Business Zip Code', 'required|max_length[9]|numeric');
 		//$this->form_validation->set_rules('fax_number', 'Fax Number', 'required|max_length[50]');
 		$this->form_validation->set_rules('telephone_number', 'Telephone Number', 'required|max_length[50]');
+		
+		if ($this->config->item('brand') == "cutradeinbids") {
+			$this->form_validation->set_rules('your_credit_union', 'Your Credit Union', 'required');
+			$this->form_validation->set_rules('referred_by', 'Referred By', 'required');
+		}
+
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[4]|max_length[20]|matches[password_confirmation]');
 		$this->form_validation->set_rules('password_confirmation', 'Password Confirmation', 'required');
 		$this->form_validation->set_rules('terms_of_use', 'Terms of Use', 'required');
 		
 		if ($this->form_validation->run() == true) {
+
+			if ($this->config->item('brand') == "cutradeinbids") {
+				$your_credit_union = $this->input->post('your_credit_union');
+				$referred_by = $this->input->post('referred_by');
+			} else {
+				$your_credit_union = "N/A - via eTradeInBids";
+				$referred_by = "N/A - via eTradeInBids";
+			}
 			
 			$first_name 		= $this->input->post('first_name');
 			$last_name 			= $this->input->post('last_name');
@@ -944,6 +958,8 @@ function update_credit_card_info() {
 											'business_zip_code' => $this->input->post('business_zip_code'),	
 											//'fax_number' => $this->input->post('fax_number'),	
 											'telephone_number' => $this->input->post('telephone_number'),
+											'your_credit_union' => $your_credit_union,
+											'referred_by' => $referred_by,
 											'approved' => 'approved'	
 								);
 		} 
