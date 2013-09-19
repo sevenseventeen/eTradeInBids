@@ -4,7 +4,7 @@
 	<title>eTradeInBids</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/reset.css'; ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/main.css?v=1.0'; ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/main.css?v=1.1'; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/jquery-ui.css'; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/jquery-ui-override.css'; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/jquery.lightbox-0.5.css'; ?>" media="screen" />
