@@ -382,10 +382,12 @@
 		
 		<div class="module_960 drop_shadow rounded_corners">
 			<h1>List a Vehicle</h1>
-			
-			<?php 
-                
-            ?>
+			<p><b>Before starting, be sure to have the following information on hand:</b></p>
+			<ol>
+				<li>1. VIN - Vehicle Identification Number <a href="#" class="tool_tip" title="The VIN is a 17-digit number that is printed on the vehicle itself. The two most common places are on the top of the driver's side dashboard (you can see it from the outside) and on the driver's side doorjamb. The VIN can also be found on numerous documents such as your sales agreement, title, insurance policy, and service records.">?</a></li>
+				<li>2. Current Mileage <a href="#" class="tool_tip" title="While listing your vehicle you will need to indicate the vehicles current mileage and if they are actual. Please note if the mileage is not actual you will be asked to provide details regarding why the mileage differs from the odometer.">?</a></li>
+ 				<li>3. Photos <a href="#" class="tool_tip" title="It is a good idea to have both interior and exterior photos of your vehicle so the certified dealers are able to offer a true-value appraisal. Often times the more photos provided result in higher bids.">?</a></li>
+			</ol>
             
 			<?php //echo "ACCINDENTS: ".$this->session->userdata('any_accidents'); ?>
 			<?php //echo "VALIDATION ERRORS".validation_errors(); ?>

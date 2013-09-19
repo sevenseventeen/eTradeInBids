@@ -8,10 +8,10 @@
 		?>
 
 		<div id="terms_of_service" class="module_960 rounded_corners drop_shadow light_gradient">
-			<a href="#dealers">For Dealers</a><br />
-			<a href="#vehicle_owners">For Vehicle Owners</a>
-			<?php $this->load->view('_includes/terms_of_service_dealer_view')?>
+			<a href="#vehicle_owners">For Vehicle Owners</a><br />
+			<a href="#dealers">For Dealers</a>
 			<?php $this->load->view('_includes/terms_of_service_vehicle_owner_view')?>
+			<?php $this->load->view('_includes/terms_of_service_dealer_view')?>
 		</div>
 		
 		<?php  //include '_includes/footer_module.php' ?>

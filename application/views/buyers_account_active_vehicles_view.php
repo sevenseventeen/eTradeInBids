@@ -91,8 +91,8 @@
 						<?php 
 							$this->load->model('data_model');
 							$main_image_path = $this->data_model->get_main_image_path($row->vehicle_id);
-							for ($i=0; $i<count($main_image_path); $i++) {
-								echo "<img src=".$main_image_path[$i]->image_name." />";
+							for ($j=0; $j<count($main_image_path); $j++) {
+								echo "<img src=".$main_image_path[$j]->image_name." />";
 							}
 						?>
 						

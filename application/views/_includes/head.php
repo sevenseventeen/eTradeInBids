@@ -4,10 +4,12 @@
 	<title>eTradeInBids</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/reset.css'; ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/main.css'; ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/main.css?v=1.0'; ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/jquery-ui.css'; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'_css/jquery.lightbox-0.5.css'; ?>" media="screen" />
     
-    <script type="text/javascript" src="<?php echo base_url().'_javascript/jquery-1.4.2.min.js'; ?>"></script>
+    <!--<script type="text/javascript" src="<?php echo base_url().'_javascript/jquery-1.4.2.min.js'; ?>"></script>-->
+    <script type="text/javascript" src="<?php echo base_url().'_javascript/jquery-1.10.1.min.js'; ?>"></script>
     <script type="text/javascript" src="<?php echo base_url().'_javascript/jquery.lightbox-0.5.js'; ?>"></script>
     
     
