@@ -14,7 +14,7 @@
 			$(document).ready(function(){
 				$("#i_agree_text").hide();
 				$("#terms_of_use_scroll").scroll(function() {
-					if($("#terms_of_use_scroll").scrollTop() >= $("#terms_of_use_scroll").attr('scrollHeight') - $("#terms_of_use_scroll").height() - 20) {
+					if($("#terms_of_use_scroll").scrollTop() >= $("#terms_of_use_scroll").prop('scrollHeight') - $("#terms_of_use_scroll").height() - 20) {
 						$("#terms_of_use_checkbox").removeAttr('disabled');
 						$("#i_agree_instructions").hide();
 						$("#i_agree_text").fadeIn();
