@@ -24,8 +24,6 @@
 					<td>Decline</td>
 				</tr>
 				
-				
-				
 				<?php foreach ($pending_buyer_accounts as $pending_buyer_account) { ?>
 				
 					<tr>

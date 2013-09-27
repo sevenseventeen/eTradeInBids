@@ -1,3 +1,11 @@
+
+/* ************ Global *************/
+
+em {
+	font-style: italic;
+}
+
+
 /* ************ Test Mode Div *************/
 
 #test_mode {
@@ -777,10 +785,12 @@ a.blue_button {
 	/*background-color: red;*/
 	float: left;
 	width:165px;
+	margin-left: 0px;
 }
 
 #footer_module #links li {
 	margin-top: 3px;
+	list-style-type: none;
 }
 
 #footer_module #links h4 {
@@ -1184,3 +1194,44 @@ margin-bottom:30px;
 }
 
 /* ******************* Copyright ****************/
+
+/* ******************* Credit Unions Page ****************/
+
+.credit_unions_page h2 {
+	margin-top: 20px;
+}
+
+.credit_unions_page img {
+	text-align: center;
+}
+
+.credit_unions_page .float_left_paragraph {
+	float: left;
+	width: 680px;
+}
+
+.credit_unions_page .float_right_paragraph {
+	float: right;
+	width: 575px;
+}
+
+.credit_unions_page #get_started_image {
+	margin-top: 20px;
+}
+
+.credit_unions_page ul.first {
+	margin-top: 20px;
+}
+
+.credit_unions_page ul {
+	margin-left: 20px;
+}
+
+.credit_unions_page ul li {
+	list-style-type: circle;
+}
+
+.credit_unions_page p.center {
+	margin-top: 40px;
+	text-align: center;
+}

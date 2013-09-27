@@ -261,6 +261,10 @@ class Site extends CI_Controller {
         $this->load->view('sellers_account_edit_vehicle_view', $data);
         
     }
+
+    function credit_unions() {
+        $this->load->view('credit_unions_view');
+    }
     
     function delete_image($vehicle_id, $image_id) {
         $this->load->model('data_model');
