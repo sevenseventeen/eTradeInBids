@@ -1227,6 +1227,12 @@ margin-bottom:30px;
 	margin-left: 20px;
 }
 
+.credit_unions_page ul li strong {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+}
+
 .credit_unions_page ul li {
 	list-style-type: circle;
 }
