@@ -469,8 +469,8 @@
     		<?php echo form_open_multipart('site/sellers_account_list_vehicle', $attributes); ?>
 			<?php $submit_data = Array('type' => 'submit', 'id' => 'vin_submit_button', 'name' => 'submit', 'type' => 'image', 'src' => base_url().'_images/lookup_vin.png', 'value' => 'submit', 'alt' => 'Submit', 'class' => 'vehicle_submit disabled'); ?>
     		<fieldset>
-				<legend>Lookup Data With VIN</legend>
-				<label>VIN Lookup</label><?php echo form_input('vin_lookup', set_value('vin_lookup', '')); ?><?php echo form_error('vin_lookup'); ?><br class="clear_float" />
+				<legend>Enter Vin</legend>
+				<label>VIN</label><?php echo form_input('vin_lookup', set_value('vin_lookup', '')); ?><?php echo form_error('vin_lookup'); ?><br class="clear_float" />
 										 <?php echo form_hidden('vin_lookup_hidden', 'vin_lookup_hidden'); ?>
 				<?php echo form_submit($submit_data); ?>
 				<!-- Leaf JN1AZ0CP2CT015821 -->
