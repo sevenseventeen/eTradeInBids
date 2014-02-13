@@ -13,7 +13,7 @@
 		</div>
 		
 		<div class="module_960 drop_shadow rounded_corners vehicle_detail">
-           <img src=<?php echo base_url()."_thumbnails/".$vehicle_details[0]->main_image_path; ?> /><br />
+           <img src=<?php echo $vehicle_details[0]->main_image_path; ?> /><br />
            <h2><?php echo $vehicle_details[0]->year.' '.$vehicle_details[0]->make.' '.$vehicle_details[0]->model.' '.$vehicle_details[0]->style; ?></h2>
            <p><?php echo $vehicle_details[0]->first_name.' '.$vehicle_details[0]->last_name; ?></p>
            <p><?php echo 'VIN: '.$vehicle_details[0]->vin; ?></p>
