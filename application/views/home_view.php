@@ -1,6 +1,8 @@
 <?php  include '_includes/head.php'; ?>
 
 	<div id="main_container">
+
+		<!-- TEST -->
 		
 		<?php
 			$main_navigation = "home";  
