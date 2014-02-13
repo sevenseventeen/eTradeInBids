@@ -343,7 +343,8 @@ class Data_model extends CI_Model {
     			$vehicle_id = $this->db->insert_id();
                 $vehicle_image_data = array(
                     'vehicle_id'    =>  $vehicle_id,
-                    'image_name'    =>  base_url()."_thumbnails/".$image_data['file_name']
+                    'image_name'    =>  base_url()."_thumbnails/".$image_data['file_name'],
+                    'is_main_image' =>	'1'
                 );
                 $this->db->insert('vehicle_images', $vehicle_image_data);
     			return $vehicle_id;
